@@ -2,29 +2,33 @@
 
 #include "Suken.h"
 
+static int BULLET_SPEED = 15;
+
 class CBullet {
 private:
 	int v;
-	float rad, x, y;
+	float x, y;
 	const int R = 10;
+	bool deleteFlag;
 public:
 	friend struct Hit;
-	void Set(int x, int y, int v, float rad);
+	CBullet(int x, int y, int v);
 	void Move();
 	void Draw();
 	int GetX();
 	int GetY();
 	int GetR();
+	bool GetDeleteFlag();
 };
 
 class CBulletManager {
 private:
-	CBullet bullet[10000];
+	std::list<CBullet>bullets;
 	int time;
 public:
 	CBulletManager();
-	void Appear();
+	void Appear(int x, int y);
 	void Move();
 	void Draw();
-	bool Hit(int x, int y, int r);
+	/*bool Hit(int x, int y, int r);*/
 };

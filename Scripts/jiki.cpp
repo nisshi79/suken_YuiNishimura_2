@@ -9,21 +9,39 @@ CJiki::CJiki() {
 }
 
 void CJiki::Move() {
-	if (Input.GetKeyDown(Input.key.RIGHT))x += V;
-	if (Input.GetKeyDown(Input.key.LEFT))x -= V;
-	if (Input.GetKeyDown(Input.key.UP))y -= V;
-	if (Input.GetKeyDown(Input.key.DOWN))y += V;
+	if (Input.GetKeyDown(Input.key.RIGHT))vx += A;
+	if (Input.GetKeyDown(Input.key.LEFT))vx -= A;
+	if (Input.GetKeyDown(Input.key.UP))vy -= A;
+	x += vx;
+}
+
+void CJiki::Gravity(){
+	vy += G;
+	y += vy;
 }
 
 void CJiki::Draw() {
-	if (Hit()) {
-		DrawCircle(x, y, R, BLUE, true);
-	}
-	else {
-		DrawCircle(x, y, R, GREEN, true);
-	}
+	DrawBox(x, y, x + SIZE, y + SIZE, RED, true);
 }
 
-bool CJiki::Hit() {
-	return GetBulletManager().Hit(x, y, R);
+//bool CJiki::Hit() {
+//	return GetBulletManager().Hit(x, y, R);
+//}
+
+int CJiki::GetX() {
+	return this -> x;
+}
+
+int CJiki::GetY() {
+	return this -> y;
+}
+
+int CJiki::GetGunX()
+{
+	return x + 50;
+}
+
+int CJiki::GetGunY()
+{
+	return y + 25;
 }

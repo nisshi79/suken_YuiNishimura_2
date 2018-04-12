@@ -4,16 +4,15 @@ float DTR(float deg) {
 	return (float)(deg*DX_PI) / 180.0;
 }
 
-void CBullet::Set(int x, int y, int v, float rad) {
+CBullet::CBullet(int x, int y, int v) {
 	this->x = x;
 	this->y = y;
 	this->v = v;
-	this->rad = rad;
+	deleteFlag = false;
 }
 
 void CBullet::Move() {
-	x += (float)v*cos(rad);
-	y += (float)v*sin(rad);
+	x += v;
 }
 
 void CBullet::Draw() {
@@ -32,28 +31,41 @@ int CBullet::GetR() {
 	return R;
 }
 
+bool CBullet::GetDeleteFlag(){
+	return deleteFlag;
+}
+
 CBulletManager::CBulletManager() {
 	time = 0;
 }
 
-void CBulletManager::Appear() {
-	if (time % 5 == 0)bullet[time / 5].Set(400, 300, 5, DTR(GetRand(359)));
+void CBulletManager::Appear(int x, int y) {
+	if (Input.GetKeyDown(Input.key.D))bullets.push_back(CBullet(x, y, BULLET_SPEED));
 	time++;
 }
 
-void CBulletManager::Move() {
-	for (int i = 0; i < 10000; i++)bullet[i].Move();
+void CBulletManager::Move(){
+	for (auto i = bullets.begin(); i != bullets.end();) {
+		i -> Move();
+		if (i->GetDeleteFlag()) {
+			i = bullets.erase(i);
+		}
+		else{
+			i++;
+		}
+		
+	}
 }
 
 void CBulletManager::Draw() {
-	for (int i = 0; i < 10000; i++)bullet[i].Draw();
+	for (auto i = bullets.begin(); i != bullets.end(); i++)i -> Draw();
 }
 
-bool CBulletManager::Hit(int x, int y, int r) {
-	for (int i = 0; i < 10000; i++) {
-		if ((x - bullet[i].GetX())*(x - bullet[i].GetX()) + (y - bullet[i].GetY())*(y - bullet[i].GetY()) <= (r + bullet[i].GetR())*(r + bullet[i].GetR())) {
-			return true;
-		}
-	}
-	return false;
-}
+//bool CBulletManager::Hit(int x, int y, int r) {
+//	for (int i = 0; i < 10000; i++) {
+//		if ((x - bullet[i].GetX())*(x - bullet[i].GetX()) + (y - bullet[i].GetY())*(y - bullet[i].GetY()) <= (r + bullet[i].GetR())*(r + bullet[i].GetR())) {
+//			return true;
+//		}
+//	}
+//	return false;
+//}

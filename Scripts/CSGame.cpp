@@ -8,8 +8,9 @@ void CSGame::Start() {
 }
 
 void CSGame::Loop() {
-	bullet.Appear();
+	bullet.Appear(jiki.GetGunX(),jiki.GetGunY());
 	bullet.Move();
+	jiki.Gravity();
 	jiki.Move();
 }
 

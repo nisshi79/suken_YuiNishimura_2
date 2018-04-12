@@ -3,12 +3,16 @@
 
 class CJiki {
 private:
-	int x, y;
-	const int R = 10;
-	const int V = 5;
+	int x, y, vy, vx;
+	const int SIZE = 50;
+	const int A = 5;
+	const float G = 1;
 public:
 	CJiki();
 	void Move();
+	void Gravity();
 	void Draw();
-	bool Hit();
+	/*bool Hit();*/
+	int GetX(),GetY();
+	int GetGunX(), GetGunY();
 };
