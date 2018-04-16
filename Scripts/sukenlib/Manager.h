@@ -13,6 +13,7 @@ namespace suken {
 	class CScene;
 
 	class CInput;
+	
 
 	//Object
 	class Object;
@@ -39,6 +40,8 @@ namespace suken {
 
 	struct Memory;
 	struct CSV;
+	
+	
 
 	/**
 	*	@brief@Main.cpp‚É‚ ‚é‚â‚ÂB

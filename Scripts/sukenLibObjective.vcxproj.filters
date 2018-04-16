@@ -97,6 +97,9 @@
     <ClInclude Include="jiki.h">
       <Filter>メイン ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>メイン ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -154,6 +157,9 @@
       <Filter>メイン ファイル</Filter>
     </ClCompile>
     <ClCompile Include="jiki.cpp">
+      <Filter>メイン ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
       <Filter>メイン ファイル</Filter>
     </ClCompile>
   </ItemGroup>

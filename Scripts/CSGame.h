@@ -3,6 +3,7 @@
 #include "Suken.h"
 #include "Bullet.h"
 #include "jiki.h"
+#include "Map.h"
 
 class CSGame :public CScene {
 	//`•Ï”éŒ¾`
