@@ -1,6 +1,6 @@
-/**
+ï»¿/**
 *@file Input.h
-*@brief ‹éŒ`“¯m‚ÌÕ“Ë”»’è‚Å‚·BPhoton‚³‚ñ‚ªl‚¦‚½‚à‚Ì‚ğNish‚ªƒ‰ƒCƒuƒ‰ƒŠ‚Ìˆê•”‚Æ‚µ‚Ü‚µ‚½B
+*@brief çŸ©å½¢åŒå£«ã®è¡çªåˆ¤å®šã§ã™ã€‚Photonã•ã‚“ãŒè€ƒãˆãŸã‚‚ã®ã‚’NishãŒãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ä¸€éƒ¨ã¨ã—ã¾ã—ãŸã€‚
 *@author Nish
 */
 
@@ -13,9 +13,9 @@ namespace suken {
 		return r1.right > r2.left && r2.right > r1.left && r1.bottom > r2.top && r2.bottom > r1.top;
 	}
 	/**
-	* @brief  ‘¬“x‚Í‘«‚µ‡‚í‚¹‚½Œã‚ğ‘z’è
+	* @brief  é€Ÿåº¦ã¯è¶³ã—åˆã‚ã›ãŸå¾Œã‚’æƒ³å®š
 	*/
-	RectFlag HitMRectRect(float& x, float& y, float& vx, float& vy, const Rect& r1, const Rect& r2, const RectFlag& enable = RectFlag(true), RectFlag& flag = RectFlag()) {//‘¬“x‚Í‘«‚µ‡‚í‚¹‚½Œã‚ğ‘z’è
+	RectFlag HitMRectRect(float& x, float& y, float& vx, float& vy, const Rect& r1, const Rect& r2, const RectFlag& enable = RectFlag(true), RectFlag& flag = RectFlag()) {//é€Ÿåº¦ã¯è¶³ã—åˆã‚ã›ãŸå¾Œã‚’æƒ³å®š
 		Vector2D vec = { x,static_cast<float>(y) };
 
 		if (HitRectRect(r1.(vec.x, vec.y), r2)) {

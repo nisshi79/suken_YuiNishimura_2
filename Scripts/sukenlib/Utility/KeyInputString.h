@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include"../Manager.h"
 #include <DxLib.h>
 #include <string>

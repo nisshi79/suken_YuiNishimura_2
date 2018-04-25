@@ -1,4 +1,4 @@
-#include "Scene.h"
+ï»¿#include "Scene.h"
 #include "../System/System.h"
 
 suken::DrawMode::DrawMode(unsigned char blendMode, unsigned char param, unsigned char red, unsigned char green, unsigned char blue) :
@@ -35,7 +35,7 @@ suken::CScene::CScene(CScene* scene, const char* ruleGraph, unsigned char speed,
 	if (next) {
 		next->Start();
 	}
-	flag |= isFliping;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isFliping;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(Flip::DEFAULT, ruleGraph, "", speed, gradate);
 }
 
@@ -48,7 +48,7 @@ suken::CScene::CScene(CScene* scene, const char* ruleGraph, const char* ruleGrap
 	if (next) {
 		next->Start();
 	}
-	flag |= isFliping;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isFliping;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(Flip::DEFAULT, ruleGraph, ruleGraph2, speed, gradate);
 }
 
@@ -61,7 +61,7 @@ suken::CScene::CScene(CScene* scene, Flip::Type flipType, unsigned char speed) {
 	if (next) {
 		next->Start();
 	}
-	flag |= isFliping;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isFliping;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(flipType, "", "", speed);
 }
 
@@ -71,45 +71,45 @@ suken::CScene::~CScene() {
 
 void suken::CScene::FlipScene(CScene* scene) {
 	next.Reset(scene);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flag &= ~isFliping;
 	flip = nullptr;
 }
 
 void suken::CScene::FlipScene(CScene* scene, const char* ruleGraph, unsigned char speed, unsigned char gradate) {
 	next.Reset(scene);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(Flip::DEFAULT, ruleGraph, "", speed,gradate);
 }
 
 void suken::CScene::FlipScene(CScene* scene, const char* ruleGraph, const char* ruleGraph2, unsigned char speed, unsigned char gradate) {
 	next.Reset(scene);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(Flip::DEFAULT, ruleGraph, ruleGraph2, speed, gradate);
 }
 
 void suken::CScene::FlipScene(CScene* scene, Flip::Type flipType, unsigned char speed) {
 	next.Reset(scene);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(flipType, "", "", speed);
 }
 
 void suken::CScene::RemoveScene() {
 	next.Reset(nullptr);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flag &= ~isFliping;
 	flip = nullptr;
 }
 
 void suken::CScene::RemoveScene(const char* ruleGraph, unsigned char speed, unsigned char gradate) {
 	next.Reset(nullptr);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(Flip::DEFAULT, ruleGraph, "", speed, gradate);
 }
 
 void suken::CScene::RemoveScene(Flip::Type flipType, unsigned char speed) {
 	next.Reset(nullptr);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(flipType, "", "", speed);
 }
 
@@ -263,7 +263,7 @@ void suken::CScene::Update() {
 	debug.debugStr.clear();
 	debug.debugFlag.clear();
 #endif // DEBUG
-	if ((flag & isFliping) == 0) {//bit‰‰Z@ƒtƒ‰ƒO”»’è@‹U
+	if ((flag & isFliping) == 0) {//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°åˆ¤å®šã€€å½
 		if (now) {
 			now->Update();
 		}
@@ -278,7 +278,7 @@ void suken::CScene::Loop() {}
 void suken::CScene::Graphic() {
 	backGround();
 	Draw();
-	if ((flag & isFliping) == 0) {//bit‰‰Z@ƒtƒ‰ƒO”»’è@‹U
+	if ((flag & isFliping) == 0) {//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°åˆ¤å®šã€€å½
 		if (now) {
 			SetDrawMode(now.Get());
 			int buf = GetDrawScreen();
@@ -316,13 +316,13 @@ void suken::CScene::LoopEnd() {
 	if (now) {
 		now->LoopEnd();
 	}
-	if (flag & isNextFlip) {//bit‰‰Z@ƒtƒ‰ƒO”»’è
+	if (flag & isNextFlip) {//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°åˆ¤å®š
 		System.GoLoading();
 		if (now) {
 			now->End();
 		}
 		if (flip != nullptr) {
-			flag |= isFliping;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+			flag |= isFliping;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 		}
 		else {
 			now.Swap(next);
@@ -334,7 +334,7 @@ void suken::CScene::LoopEnd() {
 		if (next) {
 			next->Start();
 		}
-		flag &= ~isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒt
+		flag &= ~isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ•
 		System.EndLoad();
 	}
 }
@@ -418,7 +418,7 @@ void suken::Flip::SetDrawMode(DrawMode* drawMode) {
 }
 
 bool suken::Flip::Draw(Graph now, Graph next, DrawMode* dNow, DrawMode* dNext) {
-	int x = System.GetWindowX(), y = System.GetWindowY();//‚æ‚­g‚¤‚Ì‚Å•Ï”’Z‚¢
+	int x = System.GetWindowX(), y = System.GetWindowY();//ã‚ˆãä½¿ã†ã®ã§å¤‰æ•°çŸ­ã„
 	double rad;
 	switch (type) {
 	default:
@@ -637,7 +637,7 @@ bool suken::Flip::Draw(Graph now, Graph next, DrawMode* dNow, DrawMode* dNext) {
 }
 
 bool suken::Flip::DrawAppear(Graph screen, DrawMode* mode) {
-	int x = System.GetWindowX(), y = System.GetWindowY();//‚æ‚­g‚¤‚Ì‚Å•Ï”’Z‚¢
+	int x = System.GetWindowX(), y = System.GetWindowY();//ã‚ˆãä½¿ã†ã®ã§å¤‰æ•°çŸ­ã„
 	double rad;
 	switch (type) {
 	default:
@@ -764,7 +764,7 @@ bool suken::Flip::DrawAppear(Graph screen, DrawMode* mode) {
 }
 
 bool suken::Flip::DrawDisappear(Graph screen, DrawMode* mode) {
-	int x = System.GetWindowX(), y = System.GetWindowY();//‚æ‚­g‚¤‚Ì‚Å•Ï”’Z‚¢
+	int x = System.GetWindowX(), y = System.GetWindowY();//ã‚ˆãä½¿ã†ã®ã§å¤‰æ•°çŸ­ã„
 	double rad;
 	switch (type) {
 	default:

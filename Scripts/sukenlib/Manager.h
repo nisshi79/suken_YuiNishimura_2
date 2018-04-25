@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <DxLib.h>
 #include <vector>
@@ -44,19 +44,19 @@ namespace suken {
 	
 
 	/**
-	*	@brief@Main.cpp‚É‚ ‚é‚â‚ÂB
+	*	@briefã€€Main.cppã«ã‚ã‚‹ã‚„ã¤ã€‚
 	*/
 	SystemSetting Config();
 	/**
-	*	@brief@Main.cpp‚É‚ ‚é‚â‚ÂB
+	*	@briefã€€Main.cppã«ã‚ã‚‹ã‚„ã¤ã€‚
 	*/
 	void Awake();
 	/**
-	*	@brief@Main.cpp‚É‚ ‚é‚â‚Â
+	*	@briefã€€Main.cppã«ã‚ã‚‹ã‚„ã¤
 	*/
 	void DebugLoopEnter();
 	/**
-	*	@brief@Main.cpp‚É‚ ‚é‚â‚Â
+	*	@briefã€€Main.cppã«ã‚ã‚‹ã‚„ã¤
 	*/
 	void DebugLoopExit();
 

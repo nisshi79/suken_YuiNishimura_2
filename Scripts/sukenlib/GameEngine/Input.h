@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 
 /**
 *	@file	Input.h
-*	@brief	“ü—Íî•ñ‚ğŠÇ—‚·‚é‚æ@Event. ‚Æ‘‚¢‚Ä‚à‰½‚ào‚È‚¢‚æ
+*	@brief	å…¥åŠ›æƒ…å ±ã‚’ç®¡ç†ã™ã‚‹ã‚ˆã€€Event. ã¨æ›¸ã„ã¦ã‚‚ä½•ã‚‚å‡ºãªã„ã‚ˆ
 *	@author	Photon
 */
 
@@ -10,7 +10,7 @@
 
 namespace suken {
 	/**
-	*	@brief@“ü—Í‚ğŠÇ—‚·‚éƒNƒ‰ƒX
+	*	@briefã€€å…¥åŠ›ã‚’ç®¡ç†ã™ã‚‹ã‚¯ãƒ©ã‚¹
 	*/
 	class CInput {
 	public:
@@ -132,164 +132,164 @@ namespace suken {
 		}mouse;
 
 		/**
-		*	@brief	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+		*	@brief	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 		*/
 		CInput();
 
 		/**
-		*	@brief	w’è‚³‚ê‚½ƒL[‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.key`
-		*	@return	‰Ÿ‚³‚ê‚Ä‚¢‚éŠÔ@true
+		*	@brief	æŒ‡å®šã•ã‚ŒãŸã‚­ãƒ¼ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.keyï½
+		*	@return	æŠ¼ã•ã‚Œã¦ã„ã‚‹é–“ã€€true
 		*/
 		bool GetKeyDown(Key::KeyCode keyCode);
 
 		/**
-		*	@brief	ƒL[‚Ì“ü—Íî•ñæ“¾
-		*	@return	‰Ÿ‚³‚ê‚Ä‚¢‚éŠÔ@true
+		*	@brief	ã‚­ãƒ¼ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	æŠ¼ã•ã‚Œã¦ã„ã‚‹é–“ã€€true
 		*/
 		bool GetKeyDown();
 
 		/**
-		*	@brief	w’è‚³‚ê‚½ƒL[‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.key`
-		*	@return	‰Ÿ‚³‚ê‚½uŠÔ@true
+		*	@brief	æŒ‡å®šã•ã‚ŒãŸã‚­ãƒ¼ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.keyï½
+		*	@return	æŠ¼ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetKeyEnter(Key::KeyCode keyCode);
 
 		/**
-		*	@brief	ƒL[‚Ì“ü—Íî•ñæ“¾
-		*	@return	‰Ÿ‚³‚ê‚½uŠÔ@true
+		*	@brief	ã‚­ãƒ¼ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	æŠ¼ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetKeyEnter();
 
 		/**
-		*	@brief	w’è‚³‚ê‚½ƒL[‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.key`
-		*	@return	—£‚³‚ê‚½uŠÔ@true
+		*	@brief	æŒ‡å®šã•ã‚ŒãŸã‚­ãƒ¼ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.keyï½
+		*	@return	é›¢ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetKeyExit(Key::KeyCode keyCode);
 
 		/**
-		*	@brief	ƒL[‚Ì“ü—Íî•ñæ“¾
-		*	@return	—£‚³‚ê‚½uŠÔ@true
+		*	@brief	ã‚­ãƒ¼ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	é›¢ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetKeyExit();
 
 		/**
-		*	@brief	w’è‚³‚ê‚½ƒL[‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.key`
-		*	@return	‰Ÿ‚³‚ê‚½/—£‚³‚ê‚½@ó‘Ô‚©‚ç‚ÌƒtƒŒ[ƒ€‚ğ@³/•‰@‚Ì’l‚Ì‘å‚«‚³‚Å•Ô‚·
+		*	@brief	æŒ‡å®šã•ã‚ŒãŸã‚­ãƒ¼ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.keyï½
+		*	@return	æŠ¼ã•ã‚ŒãŸ/é›¢ã•ã‚ŒãŸã€€çŠ¶æ…‹ã‹ã‚‰ã®ãƒ•ãƒ¬ãƒ¼ãƒ ã‚’ã€€æ­£/è² ã€€ã®å€¤ã®å¤§ãã•ã§è¿”ã™
 		*/
 		int GetKeyCount(Key::KeyCode keyCode);
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.mouse`
-		*	@return	‰Ÿ‚³‚ê‚Ä‚¢‚éŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.mouseï½
+		*	@return	æŠ¼ã•ã‚Œã¦ã„ã‚‹é–“ã€€true
 		*/
 		bool GetMouseDown(Mouse::MouseCode mouseCode);
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.mouse`@”ÍˆÍw’è
-		*	@return	‰Ÿ‚³‚ê‚Ä‚¢‚éŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.mouseï½ã€€ç¯„å›²æŒ‡å®š
+		*	@return	æŠ¼ã•ã‚Œã¦ã„ã‚‹é–“ã€€true
 		*/
 		bool GetMouseDown(Mouse::MouseCode mouseCode, int x1, int y1, int x2, int y2);
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@return	‰Ÿ‚³‚ê‚Ä‚¢‚éŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	æŠ¼ã•ã‚Œã¦ã„ã‚‹é–“ã€€true
 		*/
 		bool GetMouseDown();
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	”ÍˆÍw’è
-		*	@return	‰Ÿ‚³‚ê‚Ä‚¢‚éŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	ç¯„å›²æŒ‡å®š
+		*	@return	æŠ¼ã•ã‚Œã¦ã„ã‚‹é–“ã€€true
 		*/
 		bool GetMouseDown(int x1, int y1, int x2, int y2);
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@return	‰Ÿ‚³‚ê‚Ä‚¢‚È‚¢ŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	æŠ¼ã•ã‚Œã¦ã„ãªã„é–“ã€€true
 		*/
 		bool GetMouseOver();
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	”ÍˆÍw’è
-		*	@return	‰Ÿ‚³‚ê‚Ä‚¢‚È‚¢ŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	ç¯„å›²æŒ‡å®š
+		*	@return	æŠ¼ã•ã‚Œã¦ã„ãªã„é–“ã€€true
 		*/
 		bool GetMouseOver(int x1, int y1, int x2, int y2);
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.mouse`
-		*	@return	‰Ÿ‚³‚ê‚½uŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.mouseï½
+		*	@return	æŠ¼ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetMouseEnter(Mouse::MouseCode mouseCode);
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.mouse`@”ÍˆÍw’è
-		*	@return	‰Ÿ‚³‚ê‚½uŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.mouseï½ã€€ç¯„å›²æŒ‡å®š
+		*	@return	æŠ¼ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetMouseEnter(Mouse::MouseCode mouseCode, int x1, int y1, int x2, int y2);
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@return	‰Ÿ‚³‚ê‚½uŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	æŠ¼ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetMouseEnter();
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	”ÍˆÍw’è
-		*	@return	‰Ÿ‚³‚ê‚½uŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	ç¯„å›²æŒ‡å®š
+		*	@return	æŠ¼ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetMouseEnter(int x1, int y1, int x2, int y2);
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.mouse`
-		*	@return	—£‚³‚ê‚½uŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.mouseï½
+		*	@return	é›¢ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetMouseExit(Mouse::MouseCode mouseCode);
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	Input.mouse`@”ÍˆÍw’è
-		*	@return	—£‚³‚ê‚½uŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	Input.mouseï½ã€€ç¯„å›²æŒ‡å®š
+		*	@return	é›¢ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetMouseExit(Mouse::MouseCode mouseCode, int x1, int y1, int x2, int y2);
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@return	—£‚³‚ê‚½uŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	é›¢ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetMouseExit();
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@param	”ÍˆÍw’è
-		*	@return	—£‚³‚ê‚½uŠÔ@true
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@param	ç¯„å›²æŒ‡å®š
+		*	@return	é›¢ã•ã‚ŒãŸç¬é–“ã€€true
 		*/
 		bool GetMouseExit(int x1, int y1, int x2, int y2);
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@return	XÀ•W
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	Xåº§æ¨™
 		*/
 		int GetMouseX();
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@return	YÀ•W
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	Yåº§æ¨™
 		*/
 		int GetMouseY();
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@return	ƒxƒNƒgƒ‹
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return	ãƒ™ã‚¯ãƒˆãƒ«
 		*/
 		Twin<int> GetMouseVector();
 
 		/**
-		*	@brief	ƒ}ƒEƒX‚Ì“ü—Íî•ñæ“¾
-		*	@return ƒ}ƒEƒXƒzƒC[ƒ‹‚Ì“ü—Íî•ñ
+		*	@brief	ãƒã‚¦ã‚¹ã®å…¥åŠ›æƒ…å ±å–å¾—
+		*	@return ãƒã‚¦ã‚¹ãƒ›ã‚¤ãƒ¼ãƒ«ã®å…¥åŠ›æƒ…å ±
 		*/
 		int GetMouseWheel();
 

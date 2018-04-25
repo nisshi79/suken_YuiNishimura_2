@@ -1,4 +1,4 @@
-#include "KeyInputString.h"
+﻿#include "KeyInputString.h"
 #include "../GameEngine/Input.h"
 
 #define Key(Key) if(Input.GetKeyEnter(Input.key.Key))

@@ -1,4 +1,4 @@
-#include "Rect.h"
+﻿#include "Rect.h"
 suken::Rect::Rect(float left, float right, float top, float bottom) {
 		this->left = left;
 		this->top = top;

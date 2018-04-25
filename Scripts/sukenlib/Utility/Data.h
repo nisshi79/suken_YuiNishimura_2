@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "../Manager.h"
 #include <unordered_map>
@@ -7,25 +7,25 @@
 namespace suken{
 class CData{
 private:
-	std::string fileName;///<  @brief à–¾
-	std::unordered_map<std::string,int> hashIntData;///<  @brief à–¾
-	std::unordered_map<std::string,std::string> hashStringData;///<  @brief à–¾
-	std::vector<int> vectorIntData;///<  @brief à–¾
-	std::vector<std::string> vectorStringData;///<  @brief à–¾
-	std::string Normalize(std::string Str);///<  @brief à–¾
+	std::string fileName;///<  @brief èª¬æ˜
+	std::unordered_map<std::string,int> hashIntData;///<  @brief èª¬æ˜
+	std::unordered_map<std::string,std::string> hashStringData;///<  @brief èª¬æ˜
+	std::vector<int> vectorIntData;///<  @brief èª¬æ˜
+	std::vector<std::string> vectorStringData;///<  @brief èª¬æ˜
+	std::string Normalize(std::string Str);///<  @brief èª¬æ˜
 public:
 /**
-*	@brief à–¾
-*	@param value ˆø”
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
 */
 	CData(std::string fileName)
 {
 		this->fileName = fileName;
 	}
 /**
-*	@brief à–¾
-*	@param value ˆø”
-* @return –ß‚è’l
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
+* @return æˆ»ã‚Šå€¤
 */
 	int GetInt(unsigned int index)
 {
@@ -34,9 +34,9 @@ public:
 		return vectorIntData[index];
 	}
 /**
-*	@brief à–¾
-*	@param value ˆø”
-* @return –ß‚è’l
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
+* @return æˆ»ã‚Šå€¤
 */
 	std::string GetString(unsigned int index)
 {
@@ -45,9 +45,9 @@ public:
 		return vectorStringData[index];	
 	}
 /**
-*	@brief à–¾
-*	@param value ˆø”
-* @return –ß‚è’l
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
+* @return æˆ»ã‚Šå€¤
 */
 	int GetInt(const std::string &key)
 {
@@ -56,9 +56,9 @@ public:
 		return hashIntData[key];
 	}
 /**
-*	@brief à–¾
-*	@param value ˆø”
-* @return –ß‚è’l
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
+* @return æˆ»ã‚Šå€¤
 */
 	std::string GetString(const std::string &key)
 {
@@ -67,8 +67,8 @@ public:
 		return hashStringData[key];	
 	}
 /**
-*	@brief à–¾
-*	@param value ˆø”
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
 */
 	void Set(unsigned int index,int value)
 {
@@ -77,8 +77,8 @@ public:
 		vectorIntData[index] = value;
 	}
 /**
-*	@brief à–¾
-*	@param value ˆø”
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
 */
 	void Set(unsigned int index,std::string value)
 {
@@ -87,30 +87,30 @@ public:
 		vectorStringData[index] = value;
 	}
 /**
-*	@brief à–¾
-*	@param value ˆø”
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
 */
 	void Set(std::string key,int value)
 {hashIntData[key] = value;}
 /**
-*	@brief à–¾
-*	@param value ˆø”
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
 */
 	void Set(std::string key,std::string value)
 {hashStringData[key] = value;}
 /**
-*	@brief à–¾
-*	@param value ˆø”
+*	@brief èª¬æ˜
+*	@param value å¼•æ•°
 */
 	void Clear();
 /**
-*	@brief à–¾
-* @return –ß‚è’l
+*	@brief èª¬æ˜
+* @return æˆ»ã‚Šå€¤
 */
 	bool ReadAll();
 /**
-*	@brief à–¾
-* @return –ß‚è’l
+*	@brief èª¬æ˜
+* @return æˆ»ã‚Šå€¤
 */
 	bool WriteAll();
 };

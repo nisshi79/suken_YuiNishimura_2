@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "Suken.h"
 #include "Bullet.h"
@@ -6,17 +6,17 @@
 #include "Map.h"
 
 class CSGame :public CScene {
-	//`•Ï”éŒ¾`
+	//ï½å¤‰æ•°å®£è¨€ï½
 	CMap map;
 	CBulletManager bullet;
 	CJiki jiki;
 	
-	//‰Šú‰»@‰æ‘œ‚Ìƒ[ƒh‚È‚Ç‚à
+	//åˆæœŸåŒ–ã€€ç”»åƒã®ãƒ­ãƒ¼ãƒ‰ãªã©ã‚‚
 	void Start();
-	//ˆ—@–ˆƒtƒŒ[ƒ€ŒÄ‚Î‚ê‚é
+	//å‡¦ç†ã€€æ¯ãƒ•ãƒ¬ãƒ¼ãƒ å‘¼ã°ã‚Œã‚‹
 	void Loop();
-	//•`‰æ@–ˆƒtƒŒ[ƒ€ŒÄ‚Î‚ê‚é
+	//æç”»ã€€æ¯ãƒ•ãƒ¬ãƒ¼ãƒ å‘¼ã°ã‚Œã‚‹
 	void Draw();
-	//Œã•Ğ•t‚¯	•K—v‚È‚çg‚¨‚¤
+	//å¾Œç‰‡ä»˜ã‘	å¿…è¦ãªã‚‰ä½¿ãŠã†
 	void End();
 };

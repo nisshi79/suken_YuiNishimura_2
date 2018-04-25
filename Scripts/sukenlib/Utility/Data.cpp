@@ -1,4 +1,4 @@
-#include"Data.h"
+﻿#include"Data.h"
 #include <iostream>
 #include <fstream>
 #include <sys/stat.h>

@@ -1,7 +1,7 @@
-#pragma once
+ï»¿#pragma once
 /**
 *@file Rect.h
-*@brief ‹éŒ`ŠÖ˜A‚ğˆµ‚¢‚Ü‚·B
+*@brief çŸ©å½¢é–¢é€£ã‚’æ‰±ã„ã¾ã™ã€‚
 *@author Nish
 */
 
