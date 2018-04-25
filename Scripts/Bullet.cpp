@@ -4,6 +4,8 @@ float DTR(float deg) {
 	return (float)(deg*DX_PI) / 180.0;
 }
 
+
+
 CBullet::CBullet(int x, int y, int v) {
 	this->x = x;
 	this->y = y;

@@ -7,6 +7,10 @@
 
 class CSGame :public CScene {
 	//～変数宣言～
+	CMap map;
+	CBulletManager bullet;
+	CJiki jiki;
+	
 	//初期化　画像のロードなども
 	void Start();
 	//処理　毎フレーム呼ばれる
