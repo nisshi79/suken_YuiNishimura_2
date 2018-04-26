@@ -1,4 +1,4 @@
-#include "Game.h"
+ï»¿#include "Game.h"
 
 suken::CGame::CGame():CScene(false) {}
 
@@ -19,32 +19,32 @@ void suken::CGame::Init(CScene* scene, Flip flip) {
 	if (next) {
 		next->Start();
 	}
-	flag |= isFliping;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isFliping;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	this->flip = new Flip(flip);
 }
 
 void suken::CGame::FlipScene(CScene* scene) {
 	next.Reset(scene);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flag &= ~isFliping;
 	flip = nullptr;
 }
 
 void suken::CGame::FlipScene(CScene* scene, const char* ruleGraph, unsigned char speed, unsigned char gradate) {
 	next.Reset(scene);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(Flip::DEFAULT, ruleGraph, "", speed, gradate);
 }
 
 void suken::CGame::FlipScene(CScene* scene, const char* ruleGraph, const char* ruleGraph2, unsigned char speed, unsigned char gradate) {
 	next.Reset(scene);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(Flip::DEFAULT, ruleGraph, ruleGraph2, speed, gradate);
 }
 
 void suken::CGame::FlipScene(CScene* scene, Flip::Type flipType, unsigned char speed) {
 	next.Reset(scene);
-	flag |= isNextFlip;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	flag |= isNextFlip;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
 	flip = new Flip(flipType, "", "", speed);
 }
 

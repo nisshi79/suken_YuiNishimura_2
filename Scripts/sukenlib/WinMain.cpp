@@ -1,9 +1,9 @@
-#include "../Suken.h"
+ï»¿#include "../Suken.h"
 #include <DxLib.h>
 
 /**
 *	@file	WinMain.cpp
-*	@brief	ŠÕU‚Æ‚µ‚Ä‚é
+*	@brief	é–‘æ•£ã¨ã—ã¦ã‚‹
 *	@author	Photon
 */
 
@@ -21,7 +21,7 @@ int suken::Main(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR lpszCmdLine, int 
 	System.debug.Awake();
 #endif
 
-	System.Awake(Config());						//	‰Šú‰»BMain‚ÌAwake‚à‚±‚±‚ÅŒÄ‚ñ‚Å‚é
+	System.Awake(Config());						//	åˆæœŸåŒ–ã€‚Mainã®Awakeã‚‚ã“ã“ã§å‘¼ã‚“ã§ã‚‹
 
 #ifdef DEBUG
 	System.debug.Start();

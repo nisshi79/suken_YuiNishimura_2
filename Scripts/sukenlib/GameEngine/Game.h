@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 
 /**
 *	@file	Game.h
-*	@brief	CScene‚ğŒp³‚µ‚½‚çAƒR[ƒh—Ê‚ª’´Œ¸‚Á‚½
+*	@brief	CSceneã‚’ç¶™æ‰¿ã—ãŸã‚‰ã€ã‚³ãƒ¼ãƒ‰é‡ãŒè¶…æ¸›ã£ãŸ
 *	@author	Photon
 */
 
@@ -10,29 +10,29 @@
 
 namespace suken {
 	/**
-	*	@brief@‚·‚×‚Ä‚ÌƒV[ƒ“‚Ìe‚Å‚·@new CGame() ‚ğFlipScene‚É“ü‚ê‚é“z‚ÍAô‚¢E‚³‚ê‚Ü‚·
+	*	@briefã€€ã™ã¹ã¦ã®ã‚·ãƒ¼ãƒ³ã®è¦ªã§ã™ã€€new CGame() ã‚’FlipSceneã«å…¥ã‚Œã‚‹å¥´ã¯ã€å‘ªã„æ®ºã•ã‚Œã¾ã™
 	*/
 	class CGame :private CScene{
 	public:
 		CGame();
 
 		/**
-		*	@brief@ƒV[ƒ“Ø‚è‘Ö‚¦‚µ‚Ü‚·@‚Ç‚±‚Åg‚Á‚Ä‚àô‚í‚ê‚é‚±‚Æ‚Í‚ ‚è‚Ü‚¹‚ñ
+		*	@briefã€€ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆã—ã¾ã™ã€€ã©ã“ã§ä½¿ã£ã¦ã‚‚å‘ªã‚ã‚Œã‚‹ã“ã¨ã¯ã‚ã‚Šã¾ã›ã‚“
 		*/
 		void FlipScene(CScene* scene);
 
 		/**
-		*	@brief@ƒV[ƒ“Ø‚è‘Ö‚¦‚µ‚Ü‚·@ƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“‚µ‚Ü‚·@‚Ç‚±‚Åg‚Á‚Ä‚àô‚í‚ê‚é‚±‚Æ‚Í‚ ‚è‚Ü‚¹‚ñ
+		*	@briefã€€ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆã—ã¾ã™ã€€ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³ã—ã¾ã™ã€€ã©ã“ã§ä½¿ã£ã¦ã‚‚å‘ªã‚ã‚Œã‚‹ã“ã¨ã¯ã‚ã‚Šã¾ã›ã‚“
 		*/
 		void FlipScene(CScene* scene, const char* ruleGraph, unsigned char speed = 10, unsigned char gradate = 1);
 
 		/**
-		*	@brief@ƒV[ƒ“Ø‚è‘Ö‚¦‚µ‚Ü‚·@ƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“‚µ‚Ü‚·@‚Ç‚±‚Åg‚Á‚Ä‚àô‚í‚ê‚é‚±‚Æ‚Í‚ ‚è‚Ü‚¹‚ñ
+		*	@briefã€€ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆã—ã¾ã™ã€€ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³ã—ã¾ã™ã€€ã©ã“ã§ä½¿ã£ã¦ã‚‚å‘ªã‚ã‚Œã‚‹ã“ã¨ã¯ã‚ã‚Šã¾ã›ã‚“
 		*/
 		void FlipScene(CScene* scene, const char* ruleGraph, const char* ruleGraph2, unsigned char speed = 10, unsigned char gradate = 1);
 
 		/**
-		*	@brief@ƒV[ƒ“Ø‚è‘Ö‚¦‚µ‚Ü‚·@ƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“‚µ‚Ü‚·@‚Ç‚±‚Åg‚Á‚Ä‚àô‚í‚ê‚é‚±‚Æ‚Í‚ ‚è‚Ü‚¹‚ñ
+		*	@briefã€€ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆã—ã¾ã™ã€€ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³ã—ã¾ã™ã€€ã©ã“ã§ä½¿ã£ã¦ã‚‚å‘ªã‚ã‚Œã‚‹ã“ã¨ã¯ã‚ã‚Šã¾ã›ã‚“
 		*/
 		void FlipScene(CScene* scene, Flip::Type flipType, unsigned char speed = 10);
 
@@ -49,12 +49,12 @@ namespace suken {
 		bool FlipTransition();
 
 		/**
-		*	@brief@‰Šúİ’è‚Å‚·
+		*	@briefã€€åˆæœŸè¨­å®šã§ã™
 		*/
 		void Init(CScene* scene);
 
 		/**
-		*	@brief@‰Šúİ’è‚Å‚·
+		*	@briefã€€åˆæœŸè¨­å®šã§ã™
 		*/
 		void Init(CScene* scene, Flip flip);
 

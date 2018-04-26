@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <DxLib.h>
 
@@ -62,7 +62,7 @@
 #define MAGENTA_DP		GetColor(116,0,80)	//dp24
 
 //namespace suken {
-//	struct Decimal {//æZAœZ‚É•’Ê‚ÉŒ…—‚¿‚·‚é‚Ì‚ÅA’ˆÓ
+//	struct Decimal {//ä¹—ç®—ã€é™¤ç®—æ™‚ã«æ™®é€šã«æ¡è½ã¡ã™ã‚‹ã®ã§ã€æ³¨æ„
 //		static const char BITS;
 //		long long value;
 //

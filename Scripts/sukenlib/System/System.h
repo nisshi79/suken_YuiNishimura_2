@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 
 /**
 *	@file	System.h
-*	@brief	‰Šúİ’è‚âAƒVƒXƒeƒ€“I‚È‚±‚Æ‚ğ‚â‚é‚æ
+*	@brief	åˆæœŸè¨­å®šã‚„ã€ã‚·ã‚¹ãƒ†ãƒ çš„ãªã“ã¨ã‚’ã‚„ã‚‹ã‚ˆ
 *	@author Photon
 */
 
@@ -15,26 +15,26 @@
 
 namespace suken {
 	/**
-	*	@brief@‰Šúİ’è—p\‘¢‘Ì‚¾‚æ@WinMain‚Åg‚Á‚Ä‚é‚æ
+	*	@briefã€€åˆæœŸè¨­å®šç”¨æ§‹é€ ä½“ã ã‚ˆã€€WinMainã§ä½¿ã£ã¦ã‚‹ã‚ˆ
 	*/
 	struct SystemSetting {
-		unsigned char WindowSyle;//!>	ƒEƒCƒ“ƒhƒEƒXƒ^ƒCƒ‹@1F•’Ê@‚QFƒ^ƒCƒgƒ‹ƒo[‚È‚µA‰‚ ‚è@‚RFƒ^ƒCƒgƒ‹ƒo[A‰‚È‚µ
+		unsigned char WindowSyle;//!>	ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚¹ã‚¿ã‚¤ãƒ«ã€€1ï¼šæ™®é€šã€€ï¼’ï¼šã‚¿ã‚¤ãƒˆãƒ«ãƒãƒ¼ãªã—ã€ç¸ã‚ã‚Šã€€ï¼“ï¼šã‚¿ã‚¤ãƒˆãƒ«ãƒãƒ¼ã€ç¸ãªã—
 		bool isWindow;
-		std::string WindowText;//!>	¶ã‚Ìƒ^ƒCƒgƒ‹
-		unsigned char iconID;//!>ƒAƒCƒRƒ“‚ÌID@Šî–{G‚ç‚È‚¢
-		int windowWidth;//!>@ƒEƒCƒ“ƒhƒE•
-		int windowHeight;//!>@ƒEƒCƒ“ƒhƒE‚‚³
-		float targetFps;//!>@–Ú•Wfps
-		float startLoadingMinTime;//!>@Å‰‚Ìƒ[ƒhŠÔ
-		std::string startGraphPath;//!>@Å‰‚Ì‰æ–Ê
-		std::string loadingGraphPath;//!>@ƒ[ƒfƒBƒ“ƒO’†‚ÌƒAƒjƒ[ƒVƒ‡ƒ“‰æ‘œ
-		int loadingSizeX;//!>@ƒ[ƒfƒBƒ“ƒO‰æ‘œ‚Ì‰¡•
-		int loadingSizeY;//!>@ƒ[ƒfƒBƒ“ƒO‰æ‘œ‚Ì‚‚³
-		unsigned char loadingFlipTime;//!>@ƒ[ƒfƒBƒ“ƒO‰æ‘œ‚Ì•\¦Ø‘ÖŠÔ
-		int loadingPosX;//!>@ƒ[ƒfƒBƒ“ƒO‰æ‘œ‚Ì•\¦ˆÊ’u
-		int loadingPosY;//!>@ƒ[ƒfƒBƒ“ƒO‰æ‘œ‚Ì•\¦ˆÊ’u
-		bool isUseLoading;//!>@ƒ[ƒfƒBƒ“ƒOƒAƒjƒ[ƒVƒ‡ƒ“‚ğg‚¤‚©‚Ç‚¤‚©
-		bool isLaunchar;//!>@©g‚ªƒ‰ƒ“ƒ`ƒƒ[‚©‚Ç‚¤‚©
+		std::string WindowText;//!>	å·¦ä¸Šã®ã‚¿ã‚¤ãƒˆãƒ«
+		unsigned char iconID;//!>ã‚¢ã‚¤ã‚³ãƒ³ã®IDã€€åŸºæœ¬è§¦ã‚‰ãªã„
+		int windowWidth;//!>ã€€ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦å¹…
+		int windowHeight;//!>ã€€ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦é«˜ã•
+		float targetFps;//!>ã€€ç›®æ¨™fps
+		float startLoadingMinTime;//!>ã€€æœ€åˆã®ãƒ­ãƒ¼ãƒ‰æ™‚é–“
+		std::string startGraphPath;//!>ã€€æœ€åˆã®ç”»é¢
+		std::string loadingGraphPath;//!>ã€€ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ä¸­ã®ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ç”»åƒ
+		int loadingSizeX;//!>ã€€ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”»åƒã®æ¨ªå¹…
+		int loadingSizeY;//!>ã€€ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”»åƒã®é«˜ã•
+		unsigned char loadingFlipTime;//!>ã€€ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”»åƒã®è¡¨ç¤ºåˆ‡æ›¿æ™‚é–“
+		int loadingPosX;//!>ã€€ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”»åƒã®è¡¨ç¤ºä½ç½®
+		int loadingPosY;//!>ã€€ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”»åƒã®è¡¨ç¤ºä½ç½®
+		bool isUseLoading;//!>ã€€ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ä½¿ã†ã‹ã©ã†ã‹
+		bool isLaunchar;//!>ã€€è‡ªèº«ãŒãƒ©ãƒ³ãƒãƒ£ãƒ¼ã‹ã©ã†ã‹
 
 		int debugWindowWidth;
 		int debugWindowHeight;
@@ -44,111 +44,111 @@ namespace suken {
 		bool isTransiton;
 
 		/**
-		*	@brief@ƒEƒCƒ“ƒhƒEƒTƒCƒYİ’è
-		*	@param	(width)@‰¡•
-		*	@param	(height)@‚‚³
+		*	@briefã€€ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚ºè¨­å®š
+		*	@param	(width)ã€€æ¨ªå¹…
+		*	@param	(height)ã€€é«˜ã•
 		*/
 		void SetWindowSize(int width,int hegiht);
 
 		/**
-		*	@brief@ƒ[ƒfƒBƒ“ƒO‰æ‘œİ’èBg‚í‚È‚¢‚Æ‚«‚Í•K‚¸‘‚­
+		*	@briefã€€ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”»åƒè¨­å®šã€‚ä½¿ã‚ãªã„ã¨ãã¯å¿…ãšæ›¸ã
 		*/
 		void SetLoadingGraph();
 
 		/**
-		*	@brief@ƒ[ƒfƒBƒ“ƒO‰æ‘œİ’è
-		*	@param	(filrName)@‰æ‘œƒtƒ@ƒCƒ‹‚ÌˆÊ’u@
-		*	@param	(sizeX)@‰æ‘œ•ªŠ„Œã‚Ì‰¡•
-		*	@param	(sizeY)@‰æ‘œ•ªŠ„Œã‚Ì‚‚³
-		*	@param	(flipTime)@ƒAƒjƒ[ƒVƒ‡ƒ“‚ÌØ‚è‘Ö‚¦ŠÔ
-		*	@param	(positionX)@‰æ‘œ‚Ì•\¦À•W@@
-		*	@param	(positionY)@‰æ‘œ‚Ì•\¦À•W@@
+		*	@briefã€€ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”»åƒè¨­å®š
+		*	@param	(filrName)ã€€ç”»åƒãƒ•ã‚¡ã‚¤ãƒ«ã®ä½ç½®ã€€
+		*	@param	(sizeX)ã€€ç”»åƒåˆ†å‰²å¾Œã®æ¨ªå¹…
+		*	@param	(sizeY)ã€€ç”»åƒåˆ†å‰²å¾Œã®é«˜ã•
+		*	@param	(flipTime)ã€€ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã®åˆ‡ã‚Šæ›¿ãˆæ™‚é–“
+		*	@param	(positionX)ã€€ç”»åƒã®è¡¨ç¤ºåº§æ¨™ã€€ã€€
+		*	@param	(positionY)ã€€ç”»åƒã®è¡¨ç¤ºåº§æ¨™ã€€ã€€
 		*/
 		void SetLoadingGraph(const char* fileName, int sizeX, int sizeY,int flipTime=10, int positionX = 0, int positionY = 0);
 
 		/**
-		*	@brief@‰Šúİ’è‚Å‚·
+		*	@briefã€€åˆæœŸè¨­å®šã§ã™
 		*/
 		void InitScene(CScene* scene);
 
 		/**
-		*	@brief@‰Šúİ’è‚Å‚·@‰Šú‰æ–Ê‚©‚çƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“‚µ‚Ü‚·
+		*	@briefã€€åˆæœŸè¨­å®šã§ã™ã€€åˆæœŸç”»é¢ã‹ã‚‰ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³ã—ã¾ã™
 		*/
 		void InitScene(CScene* scene, const char* ruleGraph, unsigned char speed = 10, unsigned char gradate = 1);
 
 		/**
-		*	@brief@‰Šúİ’è‚Å‚·@‰Šú‰æ–Ê‚©‚çƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“‚µ‚Ü‚·
+		*	@briefã€€åˆæœŸè¨­å®šã§ã™ã€€åˆæœŸç”»é¢ã‹ã‚‰ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³ã—ã¾ã™
 		*/
 		void InitScene(CScene* scene, const char* ruleGraph, const char* ruleGraph2, unsigned char speed = 10, unsigned char gradate = 1);
 
 		/**
-		*	@brief@‰Šúİ’è‚Å‚·@‰Šú‰æ–Ê‚©‚çƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“‚µ‚Ü‚·
+		*	@briefã€€åˆæœŸè¨­å®šã§ã™ã€€åˆæœŸç”»é¢ã‹ã‚‰ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³ã—ã¾ã™
 		*/
 		void InitScene(CScene* scene, Flip::Type flipType, unsigned char speed = 10);
 	};
 
 	/**
-	*	@brief@ƒVƒXƒeƒ€ƒNƒ‰ƒX‚¾‚æ@System.`@‚Åo‚Ä‚­‚éŠÖ”‚ÍAg‚Á‚Ä‚­‚ê‚Ä\‚í‚È‚¢‚æ@Escape()‚Í©ŒÈÓ”C‚Å‚·
+	*	@briefã€€ã‚·ã‚¹ãƒ†ãƒ ã‚¯ãƒ©ã‚¹ã ã‚ˆã€€System.ï½ã€€ã§å‡ºã¦ãã‚‹é–¢æ•°ã¯ã€ä½¿ã£ã¦ãã‚Œã¦æ§‹ã‚ãªã„ã‚ˆã€€Escape()ã¯è‡ªå·±è²¬ä»»ã§ã™
 	*/
 	class CSystem {
 	public:
 		/**
-		*	@brief@ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+		*	@briefã€€ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 		*/
 		CSystem();
 
 		/**
-		*	@brief@ƒfƒXƒgƒ‰ƒNƒ^
+		*	@briefã€€ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 		*/
 		~CSystem();
 
 		/**
-		*	@brief@Às‚·‚é‚Æ‹­§I—¹‚Å‚«‚Ü‚·
+		*	@briefã€€å®Ÿè¡Œã™ã‚‹ã¨å¼·åˆ¶çµ‚äº†ã§ãã¾ã™
 		*/
 		void Escape();
 
 		/**
-		*	@brief@ƒEƒCƒ“ƒhƒE•æ“¾
+		*	@briefã€€ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦å¹…å–å¾—
 		*/
 		int GetWindowX()const;
 
 		/**
-		*	@brief@ƒEƒCƒ“ƒhƒE‚‚³æ“¾
+		*	@briefã€€ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦é«˜ã•å–å¾—
 		*/
 		int GetWindowY()const;
 
-		/**@
-		*	@brief@ƒfƒBƒXƒvƒŒƒC•æ“¾
+		/**ã€€
+		*	@briefã€€ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤å¹…å–å¾—
 		*/
 		int GetDispX()const;
 
 		/**
-		*	@brief@ƒfƒBƒXƒvƒŒƒC‚‚³æ“¾
+		*	@briefã€€ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤é«˜ã•å–å¾—
 		*/
 		int GetDispY()const;
 
 		/**
-		*	@brief@exe‚ªn‚Ü‚Á‚Ä‚©‚ç‚ÌƒtƒŒ[ƒ€”æ“¾
+		*	@briefã€€exeãŒå§‹ã¾ã£ã¦ã‹ã‚‰ã®ãƒ•ãƒ¬ãƒ¼ãƒ æ•°å–å¾—
 		*/
 		int GetFrame()const;
 
 		/**
-		*	@brief@Œ»ƒtƒŒ[ƒ€‚Ìn‚Ü‚Á‚½ŠÔæ“¾iƒ}ƒCƒNƒ•bj
+		*	@briefã€€ç¾ãƒ•ãƒ¬ãƒ¼ãƒ ã®å§‹ã¾ã£ãŸæ™‚é–“å–å¾—ï¼ˆãƒã‚¤ã‚¯ãƒ­ç§’ï¼‰
 		*/
 		int GetNow()const;
 
 		/**
-		*	@brief@ƒtƒŒ[ƒ€ƒŒ[ƒgæ“¾
+		*	@briefã€€ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¬ãƒ¼ãƒˆå–å¾—
 		*/
 		float GetFps()const;
 
 		/**
-		*	@brief@Ÿ‚ÉƒV[ƒ“Ø‚è‘Ö‚¦‚·‚é‚Æ‚«‚ÌÅ’áƒ[ƒhŠÔ‚ğİ’è‚Å‚«‚Ü‚·
+		*	@briefã€€æ¬¡ã«ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆã™ã‚‹ã¨ãã®æœ€ä½ãƒ­ãƒ¼ãƒ‰æ™‚é–“ã‚’è¨­å®šã§ãã¾ã™
 		*/
 		void SetNextLoadTime(float nextLoadingMinTime);
 
 		/**
-		*	@brief@ƒV[ƒ“Ø‚è‘Ö‚¦ƒAƒjƒ[ƒVƒ‡ƒ“‚ğ•ÏX‚Å‚«‚Ü‚·
+		*	@briefã€€ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å¤‰æ›´ã§ãã¾ã™
 		*/
 		void SetDoadAnimation(Anim anim,int positionX,int positionY);
 
@@ -185,7 +185,7 @@ namespace suken {
 			float targetRate;
 			int startTime;
 			int refreshRate;
-			unsigned char cnt;//count‚Ì–Bg—p—¦ƒ‰ƒ“ƒLƒ“ƒOãˆÊ‚É“ü‚é‚Ì‚ÅAOš—ª•Ï”‚É“a“°“ü‚è
+			unsigned char cnt;//countã®äº‹ã€‚ä½¿ç”¨ç‡ãƒ©ãƒ³ã‚­ãƒ³ã‚°ä¸Šä½ã«å…¥ã‚‹ã®ã§ã€ä¸‰å­—ç•¥å¤‰æ•°ã«æ®¿å ‚å…¥ã‚Š
 			int frame;
 			float loadingMinTime;
 			float nextLoadingMinTime;

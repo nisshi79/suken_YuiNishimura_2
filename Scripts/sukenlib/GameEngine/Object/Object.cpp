@@ -1,4 +1,4 @@
-#include "Object.h"
+﻿#include "Object.h"
 
 suken::CObject::CObject() {
 	deleteFlag = false;
