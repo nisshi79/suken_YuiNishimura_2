@@ -24,3 +24,4 @@ bool KeyConfig::Shot()
 {
 	return Input.GetKeyDown(Input.key.SPACE);
 }
+KeyConfig keyconfig;

@@ -3,7 +3,6 @@
 
 class CJiki {
 private:
-	
 	const double SCALE=30;
 	double x, y, vy, vx;
 	const int SIZE = 50;

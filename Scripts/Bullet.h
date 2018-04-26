@@ -1,6 +1,9 @@
 #pragma once
 
 #include "Suken.h"
+#include "KeyConfig.h"
+
+
 
 static int BULLET_SPEED = 15;
 

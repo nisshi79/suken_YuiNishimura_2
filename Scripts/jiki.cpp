@@ -1,8 +1,9 @@
 #include "jiki.h"
 #include "Bullet.h"
-#include "KeyConfig.h"
+extern KeyConfig keyconfig;
+
 extern CBulletManager GetBulletManager();
-KeyConfig keyconfig;
+
 CJiki::CJiki() {
 	x = 100;
 	y = 300;

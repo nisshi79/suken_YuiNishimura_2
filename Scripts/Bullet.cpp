@@ -1,6 +1,6 @@
 #include "Bullet.h"
 #include "KeyConfig.h"
-KeyConfig keyconfig;
+extern KeyConfig keyconfig;
 
 float DTR(float deg) {
 	return (float)(deg*DX_PI) / 180.0;
