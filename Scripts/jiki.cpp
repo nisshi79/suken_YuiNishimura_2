@@ -1,23 +1,48 @@
 #include "jiki.h"
 #include "Bullet.h"
-
+#include "KeyConfig.h"
 extern CBulletManager GetBulletManager();
 
 CJiki::CJiki() {
 	x = 100;
 	y = 300;
+	landFlag = false;
+}
+
+void CJiki::Fric(double& v, double flic){
+	if (v<flic && v>-flic)v = 0;
+	if (v >= flic)v -= flic;
+	if (v <= -flic)v += flic;
 }
 
 void CJiki::Move() {
-	if (Input.GetKeyDown(Input.key.RIGHT))vx += A;
-	if (Input.GetKeyDown(Input.key.LEFT))vx -= A;
-	if (Input.GetKeyDown(Input.key.UP))vy -= A;
+	if (Input.GetKeyDown(Input.key.RIGHT))vx += ACCEL;
+	if (Input.GetKeyDown(Input.key.LEFT))vx -= ACCEL;
+	if (Input.GetKeyDown(Input.key.UP))vy -= ACCEL;
+	
+	if (vx > VELOCITY_LIMIT)vx = VELOCITY_LIMIT;
+	if (vx < -VELOCITY_LIMIT)vx = -VELOCITY_LIMIT;
+	
+	if(landFlag)Fric(vx, LAND_FRIC);
+	if(!landFlag)Fric(vx, AIR_FRIC);
+	
 	x += vx;
+
+	/*this->Gravity();*/
+	if(y==300+SIZE)landFlag = true;
 }
 
 void CJiki::Gravity(){
-	vy += G;
-	y += vy;
+	if(vy<VELOCITY_LIMIT)vy += G;
+	if (y + vy + 50 > 600) {
+		y = 600;
+		vy = 0;
+		
+	}
+		y += vy;
+
+	//temp
+	
 }
 
 void CJiki::Draw() {
@@ -25,7 +50,8 @@ void CJiki::Draw() {
 }
 
 //bool CJiki::Hit() {
-//	return GetBulletManager().Hit(x, y, R);
+//	rect()
+//	HitMRectRect();
 //}
 
 int CJiki::GetX() {
@@ -36,12 +62,10 @@ int CJiki::GetY() {
 	return this -> y;
 }
 
-int CJiki::GetGunX()
-{
+int CJiki::GetGunX(){
 	return x + 50;
 }
 
-int CJiki::GetGunY()
-{
+int CJiki::GetGunY(){
 	return y + 25;
 }

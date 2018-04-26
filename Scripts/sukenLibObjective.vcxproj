@@ -23,6 +23,7 @@
     <ClInclude Include="CSGame.h" />
     <ClInclude Include="CSTitle.h" />
     <ClInclude Include="jiki.h" />
+    <ClInclude Include="KeyConfig.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MyScene.h" />
     <ClInclude Include="Suken.h" />
@@ -53,6 +54,7 @@
     <ClCompile Include="CSGame.cpp" />
     <ClCompile Include="CSTitle.cpp" />
     <ClCompile Include="jiki.cpp" />
+    <ClCompile Include="KeyConfig.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="sukenlib\DebugWindow\Debug.cpp" />

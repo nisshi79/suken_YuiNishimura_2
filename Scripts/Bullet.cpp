@@ -40,7 +40,8 @@ CBulletManager::CBulletManager() {
 }
 
 void CBulletManager::Appear(int x, int y) {
-	if (Input.GetKeyDown(Input.key.D))bullets.push_back(CBullet(x, y, BULLET_SPEED));
+	if (Input.GetKeyDown(Input.key.D) && time%20 == 0)
+		bullets.push_back(CBullet(x, y, BULLET_SPEED));
 	time++;
 }
 
