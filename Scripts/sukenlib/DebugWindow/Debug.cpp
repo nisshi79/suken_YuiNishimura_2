@@ -1,4 +1,4 @@
-ï»¿#include "Debug.h"
+#include "Debug.h"
 
 #include "../System/System.h"
 #include "../GameEngine/Game.h"
@@ -45,11 +45,11 @@ void suken::CDebug::Awake() {
 	myProg.hCursor = LoadCursor(NULL, IDC_ARROW);
 	myProg.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
 	myProg.lpszMenuName = NULL;
-	myProg.lpszClassName = "ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ï¼‘ã‚¯ãƒ©ã‚¹ãƒãƒ¼ãƒ ";
+	myProg.lpszClassName = "ƒEƒBƒ“ƒhƒE‚PƒNƒ‰ƒXƒl[ƒ€";
 	RegisterClass(&myProg);
 	hWnd = CreateWindow(
-		"ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ï¼‘ã‚¯ãƒ©ã‚¹ãƒãƒ¼ãƒ ",
-		"ï¼œDebugWindowï¼SukenlibObjective",
+		"ƒEƒBƒ“ƒhƒE‚PƒNƒ‰ƒXƒl[ƒ€",
+		"ƒDebugWindow„SukenlibObjective",
 		WS_OVERLAPPED | WS_CAPTION | WS_THICKFRAME,
 		0, 0, 1, 1,
 		NULL, NULL, System.GetHInstance(), NULL

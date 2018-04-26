@@ -1,4 +1,4 @@
-﻿#include "Utility.h"
+#include "Utility.h"
 
 //const char suken::Decimal::BITS = 12;
 //

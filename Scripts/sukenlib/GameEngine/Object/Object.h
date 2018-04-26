@@ -1,8 +1,8 @@
-ï»¿#pragma once
+#pragma once
 
 /**
 *	@file	Object.h
-*	@brief	ãƒãƒ«ãƒãªãƒãƒãƒ¼ã‚¸ãƒ£ãƒ¼ã‚’ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚¯ãƒ©ã‚¹ã§å®Ÿç¾ã—ã¾ã—ãŸ
+*	@brief	ƒ}ƒ‹ƒ`‚Èƒ}ƒl[ƒWƒƒ[‚ğƒeƒ“ƒvƒŒ[ƒgƒNƒ‰ƒX‚ÅÀŒ»‚µ‚Ü‚µ‚½
 *	@author	Photon
 */
 
@@ -11,19 +11,19 @@
 namespace suken {
 
 	/**
-	*	@brief ãƒãƒãƒ¼ã‚¸ãƒ£ãƒ¼ã‚’åˆ©ç”¨ã™ã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒç¶™æ‰¿ã™ã‚‹ã€€ãŸã„ã—ãŸã“ã¨ã¯æ›¸ã„ã¦ãªã„
+	*	@brief ƒ}ƒl[ƒWƒƒ[‚ğ—˜—p‚·‚éƒIƒuƒWƒFƒNƒg‚ªŒp³‚·‚é@‚½‚¢‚µ‚½‚±‚Æ‚Í‘‚¢‚Ä‚È‚¢
 	*/
 	class CObject {
 	public:
 		CObject();
 
 		/**
-		*	@brief ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆæ¶ˆå»
+		*	@brief ƒIƒuƒWƒFƒNƒgÁ‹
 		*/
 		void Delete();
 
 		/**
-		*	@brief æ¶ˆå»ãƒ•ãƒ©ã‚°å–å¾—
+		*	@brief Á‹ƒtƒ‰ƒOæ“¾
 		*/
 		bool GetDeleteFlag();
 
@@ -35,7 +35,7 @@ namespace suken {
 	class ObjectManagerIterator;
 
 	/**
-	*	@brief ãƒãƒ«ãƒãƒãƒãƒ¼ã‚¸ãƒ£ãƒ¼ã€€ã‚¤ãƒ†ãƒ¬ãƒ¼ã‚¿ãƒ¼ã‚’æŒã¡ã€STLã®AlgorithmãŒä½¿ãˆã‚‹(forword_iteratorå¯¾å¿œ)
+	*	@brief ƒ}ƒ‹ƒ`ƒ}ƒl[ƒWƒƒ[@ƒCƒeƒŒ[ƒ^[‚ğ‚¿ASTL‚ÌAlgorithm‚ªg‚¦‚é(forword_iterator‘Î‰)
 	*/
 	template<class Object>
 	class CManager {
@@ -45,8 +45,8 @@ namespace suken {
 		CManager() {}
 
 		/**
-		*	@brief	ãƒãƒãƒ¼ã‚¸ãƒ£ãƒ¼å†…ã®ã™ã¹ã¦ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æŒ‡å®šã—ãŸãƒ¡ãƒ³ãƒé–¢æ•°ã‚’å®Ÿè¡Œ
-		*	@param	ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ãƒ¡ãƒ³ãƒé–¢æ•°ãƒã‚¤ãƒ³ã‚¿ã€€(ä¾‹)ã€€&Object::é–¢æ•°å
+		*	@brief	ƒ}ƒl[ƒWƒƒ[“à‚Ì‚·‚×‚Ä‚ÌƒIƒuƒWƒFƒNƒg‚Ìw’è‚µ‚½ƒƒ“ƒoŠÖ”‚ğÀs
+		*	@param	ƒIƒuƒWƒFƒNƒg‚Ìƒƒ“ƒoŠÖ”ƒ|ƒCƒ“ƒ^@(—á)@&Object::ŠÖ”–¼
 		*/
 		void Do(void(Object::*func)()) {
 			for (auto it = Begin(), end = End(); it != end;++it) {
@@ -55,7 +55,7 @@ namespace suken {
 		}
 
 		/**
-		*	@brief	ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆç™»éŒ²
+		*	@brief	ƒIƒuƒWƒFƒNƒg“o˜^
 		*/
 		void Regist(Object* object) {
 			for (auto it = Begin(), end = End(); it != end; ++it) {
@@ -68,7 +68,7 @@ namespace suken {
 		}
 
 		/**
-		*	@brief	Drawã®çµ‚ã‚ã‚Šã«æ¯é€±å‘¼ã¼ã†!
+		*	@brief	Draw‚ÌI‚í‚è‚É–ˆTŒÄ‚Ú‚¤!
 		*/
 		void LoopEnd() {
 			for (auto it = Begin(), end = End(); it != end; ++it) {
@@ -100,7 +100,7 @@ namespace suken {
 	};
 
 	/**
-	*	@brief è‡ªä½œã‚¤ãƒ†ãƒ¬ãƒ¼ã‚¿ãƒ¼
+	*	@brief ©ìƒCƒeƒŒ[ƒ^[
 	*/
 	template<class Ty>
 	class ObjectManagerIterator :public std::iterator<std::forward_iterator_tag, Ty, std::ptrdiff_t, Ty*, Ty&> {

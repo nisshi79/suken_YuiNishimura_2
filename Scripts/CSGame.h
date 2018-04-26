@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include "Suken.h"
 #include "Bullet.h"
@@ -6,14 +6,15 @@
 #include "Map.h"
 
 class CSGame :public CScene {
-	//～変数宣言～
+	//�`�ϐ��錾�`
+
 	
-	//初期化　画像のロードなども
+	//�������@�摜�̃��[�h�Ȃǂ�
 	void Start();
-	//処理　毎フレーム呼ばれる
+	//�����@���t���[���Ă΂��
 	void Loop();
-	//描画　毎フレーム呼ばれる
+	//�`��@���t���[���Ă΂��
 	void Draw();
-	//後片付け	必要なら使おう
+	//��Еt��	�K�v�Ȃ�g����
 	void End();
 };

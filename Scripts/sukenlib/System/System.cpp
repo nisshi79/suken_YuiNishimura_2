@@ -1,4 +1,4 @@
-ï»¿#include "System.h"
+#include "System.h"
 #include "../GameEngine/Input.h"
 #include "../Utility/Utility.h"
 
@@ -49,7 +49,7 @@ void suken::SystemSetting::InitScene(CScene* scene, Flip::Type flipType, unsigne
 	isTransiton = true;
 }
 
-suken::CSystem::CSystem() {//åˆæœŸåŒ–å¿…é ˆãªå¥´ã ã‘åˆæœŸåŒ–
+suken::CSystem::CSystem() {//‰Šú‰»•K{‚È“z‚¾‚¯‰Šú‰»
 	m.cnt = 0;
 	m.fps = 60.0f;
 	m.flag = 0;
@@ -58,7 +58,7 @@ suken::CSystem::CSystem() {//åˆæœŸåŒ–å¿…é ˆãªå¥´ã ã‘åˆæœŸåŒ–
 suken::CSystem::~CSystem(){}
 
 void suken::CSystem::Escape() {
-	m.flag |= isEscape;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
+	m.flag |= isEscape;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
 }
 
 int suken::CSystem::GetWindowX()const {
@@ -108,8 +108,8 @@ void suken::CSystem::SetDoadAnimation(Anim anim, int positionX, int positionY) {
 	Game.loadingPosY = positionY;
 }
 
-void suken::CSystem::Awake(SystemSetting s) {//m:ãƒ¡ãƒ³ãƒå¤‰æ•°ã€s:SystemSettingsã®å¼•æ•°
-	//DxLibåˆæœŸåŒ–ï½
+void suken::CSystem::Awake(SystemSetting s) {//m:ƒƒ“ƒo•Ï”As:SystemSettings‚Ìˆø”
+	//DxLib‰Šú‰»`
 	DxLib::SetWindowStyleMode(s.WindowSyle);
 	DxLib::SetMainWindowText(s.WindowText.c_str());
 	DxLib::SetWindowIconID(s.iconID);
@@ -126,23 +126,23 @@ void suken::CSystem::Awake(SystemSetting s) {//m:ãƒ¡ãƒ³ãƒå¤‰æ•°ã€s:SystemSetti
 	DxLib_Init();
 	DxLib::SetSysCommandOffFlag(true);
 
-	m.now = GetNowCount();//æ™‚é–“è¨ˆæ¸¬ã®ãŸã‚æ—©ã‚ã«å®Ÿè¡Œ
+	m.now = GetNowCount();//ŠÔŒv‘ª‚Ì‚½‚ß‘‚ß‚ÉÀs
 	Game.screen = MakeScreen(s.windowWidth, s.windowHeight, true);
 	Game.nextScreen = MakeScreen(s.windowWidth, s.windowHeight, true);
 	DxLib::SetDrawScreen(Game.screen);
-	Graph start(s.startGraphPath.c_str());//Graphæ§‹é€ ä½“ã¯ä½¿ã„çµ‚ã‚ã£ãŸã‚‰ãƒ¡ãƒ¢ãƒªè§£æ”¾ã—ã¦ãã‚Œã‚‹è³¢ã„å­ã€‚ã‚³ãƒ”ã‚³ãƒ³ã€ä»£å…¥æ¼”ç®—å­å¯¾å¿œã€‚
+	Graph start(s.startGraphPath.c_str());//Graph\‘¢‘Ì‚Íg‚¢I‚í‚Á‚½‚çƒƒ‚ƒŠ‰ğ•ú‚µ‚Ä‚­‚ê‚éŒ«‚¢qBƒRƒsƒRƒ“A‘ã“ü‰‰Zq‘Î‰B
 	start.DrawExtend(0, 0, s.windowWidth, s.windowHeight);
 	if (s.isUseLoading) {
-		Game.loadingAnim.Set(LoadDivGraph(s.loadingGraphPath.c_str(),6,3,2,s.loadingSizeX,s.loadingSizeY),1);//Animæ§‹é€ ä½“ã¯ç°¡å˜ãªã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã‚’æä¾›ã—ã¾ã™ã€‚
+		Game.loadingAnim.Set(LoadDivGraph(s.loadingGraphPath.c_str(),6,3,2,s.loadingSizeX,s.loadingSizeY),1);//Anim\‘¢‘Ì‚ÍŠÈ’P‚ÈƒAƒjƒ[ƒVƒ‡ƒ“‚ğ’ñ‹Ÿ‚µ‚Ü‚·B
 		Game.loadingFlipTime = s.loadingFlipTime;
 		Game.loadingPosX = s.loadingPosX;
 		Game.loadingPosY = s.loadingPosY;
-		SetUseASyncLoadFlag(true);//éåŒæœŸãƒ­ãƒ¼ãƒ‰ã‚’å¯èƒ½ã«ã—ãƒ­ãƒ¼ãƒ‰ä¸­ã«ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã§ãã‚‹ã‚ˆã†ã«ã™ã‚‹é­”æ³•ã®å‘ªæ–‡
+		SetUseASyncLoadFlag(true);//”ñ“¯Šúƒ[ƒh‚ğ‰Â”\‚É‚µƒ[ƒh’†‚ÉƒAƒjƒ[ƒVƒ‡ƒ“‚Å‚«‚é‚æ‚¤‚É‚·‚é–‚–@‚Ìô•¶
 	}
 	DxLib::SetDrawScreen(DX_SCREEN_BACK);
 	Game.screen.Draw();
 	DxLib::ScreenFlip();
-	//å¤‰æ•°åˆæœŸåŒ–ï½
+	//•Ï”‰Šú‰»`
 	m.windowWidth = s.windowWidth;
 	m.windowHeight = s.windowHeight;
 	m.displayX = GetSystemMetrics(SM_CXSCREEN);
@@ -150,14 +150,14 @@ void suken::CSystem::Awake(SystemSetting s) {//m:ãƒ¡ãƒ³ãƒå¤‰æ•°ã€s:SystemSetti
 	m.targetRate = s.targetFps == 0 ? 0 : 1000.0f / s.targetFps;
 	m.startTime = m.now + 1000;
 	HDC hdc;
-	hdc = GetDC(DxLib::GetMainWindowHandle());//ãƒ‡ãƒã‚¤ã‚¹ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã®å–å¾—
-	m.refreshRate = GetDeviceCaps(hdc, VREFRESH);//ãƒªãƒ•ãƒ¬ãƒƒã‚·ãƒ¥ãƒ¬ãƒ¼ãƒˆã®å–å¾—
-	ReleaseDC(GetMainWindowHandle(), hdc);//ãƒ‡ãƒã‚¤ã‚¹ã‚³ãƒ³ãƒ†ã‚¯ã‚¹ãƒˆã®è§£æ”¾
+	hdc = GetDC(DxLib::GetMainWindowHandle());//ƒfƒoƒCƒXƒRƒ“ƒeƒLƒXƒg‚Ìæ“¾
+	m.refreshRate = GetDeviceCaps(hdc, VREFRESH);//ƒŠƒtƒŒƒbƒVƒ…ƒŒ[ƒg‚Ìæ“¾
+	ReleaseDC(GetMainWindowHandle(), hdc);//ƒfƒoƒCƒXƒRƒ“ƒeƒNƒXƒg‚Ì‰ğ•ú
 	m.loadingMinTime = s.startLoadingMinTime;
 	m.nextLoadingMinTime = 0.0f;
-	if (s.isUseLoading)m.flag |= isUseLoading;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
-	if (s.isLaunchar)m.flag |= isLaunchar;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°ã‚ªãƒ³
-	//ã“ã“ã§åˆæœŸåŒ–ã—ã¡ã‚ƒãŠã†ã€‚
+	if (s.isUseLoading)m.flag |= isUseLoading;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	if (s.isLaunchar)m.flag |= isLaunchar;//bit‰‰Z@ƒtƒ‰ƒOƒIƒ“
+	//‚±‚±‚Å‰Šú‰»‚µ‚¿‚á‚¨‚¤B
 	if (s.isTransiton) {
 		Game.Init(s.scene,s.flip);
 	}
@@ -167,13 +167,13 @@ void suken::CSystem::Awake(SystemSetting s) {//m:ãƒ¡ãƒ³ãƒå¤‰æ•°ã€s:SystemSetti
 	suken::Awake();
 
 	if (s.isUseLoading) {
-		DxLib::SetUseASyncLoadFlag(false);//éåŒæœŸãƒ­ãƒ¼ãƒ‰ã“ã“ã¾ã§ã€‚
-		m.flag |= isLoading;//Loadingç¶šè¡Œã§Awakeçµ‚äº†
+		DxLib::SetUseASyncLoadFlag(false);//”ñ“¯Šúƒ[ƒh‚±‚±‚Ü‚ÅB
+		m.flag |= isLoading;//Loading‘±s‚ÅAwakeI—¹
 	}
 	else {
-		float restTime = s.startLoadingMinTime - (DxLib::GetNowCount() - m.now/*Initç›´å¾Œã®æ™‚é–“ã¯ã„ã£ã¦ã‚‹*/);
+		float restTime = s.startLoadingMinTime - (DxLib::GetNowCount() - m.now/*Init’¼Œã‚ÌŠÔ‚Í‚¢‚Á‚Ä‚é*/);
 		if (restTime > 0) {
-			DxLib::WaitTimer((int)restTime);//æ™‚é–“ã‚’é£›ã°ã™ã‚ˆ
+			DxLib::WaitTimer((int)restTime);//ŠÔ‚ğ”ò‚Î‚·‚æ
 		}
 	}
 #ifdef DEBUG
@@ -189,7 +189,7 @@ void suken::CSystem::Start(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR lpszCm
 }
 
 bool suken::CSystem::GetIsEscape() {
-	return m.flag & isEscape;//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°åˆ¤å®š
+	return m.flag & isEscape;//bit‰‰Z@ƒtƒ‰ƒO”»’è
 }
 
 void suken::CSystem::Update() {
@@ -287,7 +287,7 @@ void suken::CSystem::Wait() {
 
 void suken::CSystem::End() {
 	DxLib::DxLib_End();
-	if ((m.flag & isLaunchar) == 0) {//bitæ¼”ç®—ã€€ãƒ•ãƒ©ã‚°åˆ¤å®šã€€å½
+	if ((m.flag & isLaunchar) == 0) {//bit‰‰Z@ƒtƒ‰ƒO”»’è@‹U
 		ShellExecute(DxLib::GetMainWindowHandle(), "open", "Launcher.exe", nullptr, nullptr, SW_SHOW);
 	}
 }

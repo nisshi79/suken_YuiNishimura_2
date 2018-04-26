@@ -1,8 +1,8 @@
-ï»¿#pragma once
+#pragma once
 
 namespace suken {
 	/**
-	*	@briefã€€è‡ªä½œãƒ¦ãƒ‹ãƒ¼ã‚¯ãƒã‚¤ãƒ³ã‚¿ã€€å¿…è¦ã ã£ãŸæ©Ÿèƒ½ã—ã‹å…¥ã£ã¦ã„ãªã„
+	*	@brief@©ìƒ†ƒj[ƒNƒ|ƒCƒ“ƒ^@•K—v‚¾‚Á‚½‹@”\‚µ‚©“ü‚Á‚Ä‚¢‚È‚¢
 	*/
 	template<typename T>class UniquePtr {
 	public:

@@ -1,4 +1,4 @@
-﻿#include "jiki.h"
+#include "jiki.h"
 #include "Bullet.h"
 #include "KeyConfig.h"
 extern CBulletManager GetBulletManager();

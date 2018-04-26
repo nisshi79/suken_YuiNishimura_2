@@ -12,9 +12,6 @@ void CSGame::Loop() {
 	bullet.Appear(jiki.GetGunX(),jiki.GetGunY());
 	bullet.Move();
 	jiki.Move();
-
-
-
 }
 
 void CSGame::Draw() {

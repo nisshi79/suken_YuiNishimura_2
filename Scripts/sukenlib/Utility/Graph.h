@@ -1,8 +1,8 @@
-ï»¿#pragma once
+#pragma once
 
 /**
 *	@file	Graph.h
-*	@brief	ãªãœã“ã‚“ãªä¾¿åˆ©ãªã‚‚ã®ãŒä»Šã¾ã§å­˜åœ¨ã—ãªã‹ã£ãŸã®ã‹ã€‚ä¾¿åˆ©ãªæ§‹é€ ä½“ Graph ã¨ Anim ã€LoadDivGraphé–¢æ•°ã®ã‚¢ãƒ¬ãƒ³ã‚¸ã€€ã‚’è¿½åŠ ã—ã¾ã™
+*	@brief	‚È‚º‚±‚ñ‚È•Ö—˜‚È‚à‚Ì‚ª¡‚Ü‚Å‘¶İ‚µ‚È‚©‚Á‚½‚Ì‚©B•Ö—˜‚È\‘¢‘Ì Graph ‚Æ Anim ALoadDivGraphŠÖ”‚ÌƒAƒŒƒ“ƒW@‚ğ’Ç‰Á‚µ‚Ü‚·
 *	@author	Photon
 */
 
@@ -10,47 +10,47 @@
 
 namespace suken {
 	/**
-	*	@briefã€€ç”»åƒã®æ‰±ã„ãŒã¨ã¦ã‚‚æ¥½ã«ãªã‚‹ã€æ•°ç ”éƒ¨å“¡ã®å¼·ã„å‘³æ–¹ã§ã™ã€€å†…éƒ¨æ§‹é€ ã‚’ç†è§£ã™ã‚‹å¿…è¦ã¯ã‚ã‚Šã¾ã›ã‚“ã€€DrawGraph()ã®å¼•æ•°ã«ä½¿ãˆã‚‹ã—ã€LoadGraph()ã‚’ä»£å…¥ã™ã‚‹ã“ã¨ã‚‚ã§ãã¾ã™
+	*	@brief@‰æ‘œ‚Ìˆµ‚¢‚ª‚Æ‚Ä‚àŠy‚É‚È‚éA”Œ¤•”ˆõ‚Ì‹­‚¢–¡•û‚Å‚·@“à•”\‘¢‚ğ—‰ğ‚·‚é•K—v‚Í‚ ‚è‚Ü‚¹‚ñ@DrawGraph()‚Ìˆø”‚Ég‚¦‚é‚µALoadGraph()‚ğ‘ã“ü‚·‚é‚±‚Æ‚à‚Å‚«‚Ü‚·
 	*/
 	struct Graph {
 	public:
 		/**
-		*	@briefã€€æ—¢å®šã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@Šù’è‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		*/
 		Graph();
 
 		/**
-		*	@briefã€€ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		*/
 		Graph(const int& handle);
 
 		/**
-		*	@briefã€€ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		*/
 		Graph(const char* file);
 
 		/**
-		*	@briefã€€ã‚³ãƒ”ãƒ¼ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@ƒRƒs[ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		*/
 		Graph(const Graph& obj);
 
 		/**
-		*	@briefã€€ä»£å…¥æ¼”ç®—å­
+		*	@brief@‘ã“ü‰‰Zq
 		*/
 		Graph& operator=(const Graph& obj);
 
 		/**
-		*	@briefã€€ä»£å…¥æ¼”ç®—å­
+		*	@brief@‘ã“ü‰‰Zq
 		*/
 		Graph& operator=(const char* file);
 
 		/**
-		*	@briefã€€DXãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®é–¢æ•°ã®å¼•æ•°ã«å…¥ã‚Œã‚‹ã“ã¨ã‚‚ã§ãã¾ã™
+		*	@brief@DXƒ‰ƒCƒuƒ‰ƒŠ‚ÌŠÖ”‚Ìˆø”‚É“ü‚ê‚é‚±‚Æ‚à‚Å‚«‚Ü‚·
 		*/
 		operator int()const;
 
 		/**
-		*	@briefã€€ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@ƒfƒXƒgƒ‰ƒNƒ^
 		*/
 		~Graph();
 
@@ -61,80 +61,80 @@ namespace suken {
 		Graph& operator=(const int& handle);
 
 		/**
-		*	@briefã€€æç”»ã€€ä½ç½®ã¯0,0
+		*	@brief@•`‰æ@ˆÊ’u‚Í0,0
 		*/
 		void operator ()()const;
 
 		/**
-		*	@briefã€€æç”»
+		*	@brief@•`‰æ
 		*/
 		void operator ()(int x, int y, bool turnFlag = false)const;
 		/**
-		*	@briefã€€æç”»
+		*	@brief@•`‰æ
 		*/
 		void operator ()(Vector2D v, bool turnFlag = false)const;
 
 		/**
-		*	@briefã€€æç”»ã€€ä½ç½®ã¯0,0
+		*	@brief@•`‰æ@ˆÊ’u‚Í0,0
 		*/
 		void Draw()const;
 
 		/**
-		*	@briefã€€æç”»
+		*	@brief@•`‰æ
 		*/
 		void Draw(int x,int y, bool turnFlag = false)const;
 		/**
-		*	@briefã€€æç”»
+		*	@brief@•`‰æ
 		*/
 		void Draw(Vector2D v, bool turnFlag = false)const;
 
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota(int x, int y,double ExtRate, double angle, bool turnFlag = false)const;
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota(Vector2D v, double ExtRate, double angle, bool turnFlag = false)const;
 
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota2(int x, int y,int cx,int cy, double ExtRate, double angle, bool turnFlag = false)const;
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota2(Vector2D v, Vector2D center, double angle, double ExtRate, bool turnFlag = false)const;
 
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota3(int x, int y, int cx, int cy, double ExtRateX, double ExtRateY, double angle, bool turnFlag = false)const;
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota3(Vector2D v, Vector2D center, double angle, Vector2D ExtRate, bool turnFlag = false)const;
 
 		/**
-		*	@briefã€€æç”»ã€€2ç‚¹ã®åº§æ¨™æŒ‡å®š
+		*	@brief@•`‰æ@2“_‚ÌÀ•Ww’è
 		*/
 		void DrawExtend(int x1, int y1, int x2, int y2)const;
 		/**
-		*	@briefã€€æç”»ã€€2ç‚¹ã®åº§æ¨™æŒ‡å®š
+		*	@brief@•`‰æ@2“_‚ÌÀ•Ww’è
 		*/
 		void DrawExtend(Vector2D v1, Vector2D v2)const;
 
 		/**
-		*	@briefã€€æç”»ã€€4ç‚¹ã®åº§æ¨™æŒ‡å®š
+		*	@brief@•`‰æ@4“_‚ÌÀ•Ww’è
 		*/
 		void DrawModi(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)const;
 		/**
-		*	@briefã€€æç”»ã€€4ç‚¹ã®åº§æ¨™æŒ‡å®š
+		*	@brief@•`‰æ@4“_‚ÌÀ•Ww’è
 		*/
 		void DrawModi(Vector2D v1, Vector2D v2, Vector2D v3, Vector2D v4)const;
 
 		/**
-		*	@briefã€€å¹…ã€é«˜ã•ã‚’ãƒšã‚¢ã§è¿”ã™
+		*	@brief@•A‚‚³‚ğƒyƒA‚Å•Ô‚·
 		*/
 		std::pair<int, int> GetSize()const;
 
@@ -147,106 +147,106 @@ namespace suken {
 	};
 
 	/**
-	*	@briefã€€ã‚‚ã†æ•°ç ”éƒ¨å“¡ã¯ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã‚«ã‚¦ãƒ³ã‚¿ã‚’ä½œã‚‹å¿…è¦ã¯ãªã„ã®ã§ã™ã€€LoadDivGraph()ã‚’ä»£å…¥ã—ã¦ã€å¤‰æ•°åã«ï¼ˆï¼‰ã‚’ã¤ã‘ã‚‹ã ã‘ã§å‹æ‰‹ã«ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã™ã‚‹ã®ã§ã™
+	*	@brief@‚à‚¤”Œ¤•”ˆõ‚ÍƒAƒjƒ[ƒVƒ‡ƒ“ƒJƒEƒ“ƒ^‚ğì‚é•K—v‚Í‚È‚¢‚Ì‚Å‚·@LoadDivGraph()‚ğ‘ã“ü‚µ‚ÄA•Ï”–¼‚Éij‚ğ‚Â‚¯‚é‚¾‚¯‚ÅŸè‚ÉƒAƒjƒ[ƒVƒ‡ƒ“‚·‚é‚Ì‚Å‚·
 	*/
 	struct Anim {
 	public:
 		/**
-		*	@briefã€€æ—¢å®šã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@Šù’è‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		*/
 		Anim();
 
 		/**
-		*	@briefã€€ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€€è¨­å®šã™ã‚‹
+		*	@brief@ƒRƒ“ƒXƒgƒ‰ƒNƒ^@İ’è‚·‚é
 		*/
 		Anim(GraphVec graph, unsigned char flipTime=10);
 
 		/**
-		*	@briefã€€è¨­å®š
+		*	@brief@İ’è
 		*/
 		void Set(GraphVec graph, unsigned char flipTime = 10);
 
 		/**
-		*	@briefã€€ç”»åƒã®vectorã‚’ã‚’è¿”ã™
+		*	@brief@‰æ‘œ‚Ìvector‚ğ‚ğ•Ô‚·
 		*/
 		GraphVec& GetVec();
 
 		/**
-		*	@briefã€€åˆ‡ã‚Šæ›¿ãˆé€Ÿåº¦ã‚’è¿”ã™
+		*	@brief@Ø‚è‘Ö‚¦‘¬“x‚ğ•Ô‚·
 		*/
 		const char GetFlipTime();
 
 		/**
-		*	@briefã€€ç”»åƒã‚’å…¥ã‚Œã‚‹ã ã‘ã€€åˆ‡ã‚Šæ›¿ãˆé€Ÿåº¦ã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ
+		*	@brief@‰æ‘œ‚ğ“ü‚ê‚é‚¾‚¯@Ø‚è‘Ö‚¦‘¬“x‚ÍƒfƒtƒHƒ‹ƒg
 		*/
 		Anim& operator =(GraphVec& vec);
 
 		/**
-		*	@briefã€€æç”»
+		*	@brief@•`‰æ
 		*/
 		void operator ()(int x, int y, bool isTurn = false, bool isPlusCount = true);
 
 		/**
-		*	@briefã€€æç”»
+		*	@brief@•`‰æ
 		*/
 		void operator ()(Vector2D vec, bool isTurn = false, bool isPlusCount = true);
 
 		/**
-		*	@briefã€€æç”»
+		*	@brief@•`‰æ
 		*/
 		void Draw(int x, int y, bool turnFlag = false, bool isPlusCount = true);
 		/**
-		*	@briefã€€æç”»
+		*	@brief@•`‰æ
 		*/
 		void Draw(Vector2D v, bool turnFlag = false, bool isPlusCount = true);
 
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota(int x, int y, double ExtRate, double angle, bool turnFlag = false, bool isPlusCount = true);
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota(Vector2D v, double ExtRate, double angle, bool turnFlag = false, bool isPlusCount = true);
 
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota2(int x, int y, int cx, int cy, double ExtRate, double angle, bool turnFlag = false, bool isPlusCount = true);
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota2(Vector2D v, Vector2D center, double angle, double ExtRate, bool turnFlag = false, bool isPlusCount = true);
 
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota3(int x, int y, int cx, int cy, double ExtRateX, double ExtRateY, double angle, bool turnFlag = false, bool isPlusCount = true);
 		/**
-		*	@briefã€€æç”»ã€€å›è»¢è§’åº¦æŒ‡å®š
+		*	@brief@•`‰æ@‰ñ“]Šp“xw’è
 		*/
 		void DrawRota3(Vector2D v, Vector2D center, double angle, Vector2D ExtRate, bool turnFlag = false, bool isPlusCount = true);
 
 		/**
-		*	@briefã€€æç”»ã€€2ç‚¹ã®åº§æ¨™æŒ‡å®š
+		*	@brief@•`‰æ@2“_‚ÌÀ•Ww’è
 		*/
 		void DrawExtend(int x1, int y1, int x2, int y2, bool isPlusCount = true);
 		/**
-		*	@briefã€€æç”»ã€€2ç‚¹ã®åº§æ¨™æŒ‡å®š
+		*	@brief@•`‰æ@2“_‚ÌÀ•Ww’è
 		*/
 		void DrawExtend(Vector2D v1, Vector2D v2, bool isPlusCount = true);
 
 		/**
-		*	@briefã€€æç”»ã€€4ç‚¹ã®åº§æ¨™æŒ‡å®š
+		*	@brief@•`‰æ@4“_‚ÌÀ•Ww’è
 		*/
 		void DrawModi(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, bool isPlusCount = true);
 		/**
-		*	@briefã€€æç”»ã€€4ç‚¹ã®åº§æ¨™æŒ‡å®š
+		*	@brief@•`‰æ@4“_‚ÌÀ•Ww’è
 		*/
 		void DrawModi(Vector2D v1, Vector2D v2, Vector2D v3, Vector2D v4, bool isPlusCount = true);
 
 		/**
-		*	@briefã€€ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã‚«ã‚¦ãƒ³ãƒˆã‚’å¢—ã‚„ã—ã¾ã™
+		*	@brief@ƒAƒjƒ[ƒVƒ‡ƒ“ƒJƒEƒ“ƒg‚ğ‘‚â‚µ‚Ü‚·
 		*/
 		void PlusCount();
 	private:
@@ -256,37 +256,37 @@ namespace suken {
 	};
 
 	/**
-	*	@briefã€€ãƒ•ã‚©ãƒ³ãƒˆãƒãƒ³ãƒ‰ãƒ«ã‚’ç°¡å˜ã«ä½¿ã†ãŸã‚ã®ã‚¯ãƒ©ã‚¹
+	*	@brief@ƒtƒHƒ“ƒgƒnƒ“ƒhƒ‹‚ğŠÈ’P‚Ég‚¤‚½‚ß‚ÌƒNƒ‰ƒX
 	*/
 	struct Font {
 	public:
 		/**
-		*	@briefã€€æ—¢å®šã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@Šù’è‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		*/
 		Font();
 
 		/**
-		*	@briefã€€ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		*/
 		Font(const char* FontName,int height,int thick = -1,int fontType = -1,int edgeSize = -1,bool isItalic = false);
 
 		/**
-		*	@briefã€€ã‚³ãƒ”ãƒ¼ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@ƒRƒs[ƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		*/
 		Font(const Font& obj);
 
 		/**
-		*	@briefã€€ä»£å…¥æ¼”ç®—å­
+		*	@brief@‘ã“ü‰‰Zq
 		*/
 		Font& operator=(const Font& obj);
 
 		/**
-		*	@briefã€€DXãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®é–¢æ•°ã®å¼•æ•°ã«å…¥ã‚Œã‚‹ã“ã¨ãŒã§ãã¾ã™
+		*	@brief@DXƒ‰ƒCƒuƒ‰ƒŠ‚ÌŠÖ”‚Ìˆø”‚É“ü‚ê‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·
 		*/
 		operator int()const;
 
 		/**
-		*	@briefã€€ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@ƒfƒXƒgƒ‰ƒNƒ^
 		*/
 		~Font();
 
@@ -306,33 +306,33 @@ namespace suken {
 		void Release();
 	};
 
-	///** //ä¸å…·åˆãŒã‚ã‚‹ã®ã§ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ
-	//*	@briefã€€ç”»åƒã‚’åˆ†å‰²èª­ã¿è¾¼ã¿ã™ã‚‹ã®ã«ã€é¢å€’ãªè¨­å®šã¯ã„ã‚Šã¾ã›ã‚“ã€€è¦ç´ æ•°ã¯vector.size()ã§ç¢ºèªã—ã¦ãã ã•ã„ä¿è¨¼ã¯ã—ã¾ã›ã‚“
+	///** //•s‹ï‡‚ª‚ ‚é‚Ì‚ÅƒRƒƒ“ƒgƒAƒEƒg
+	//*	@brief@‰æ‘œ‚ğ•ªŠ„“Ç‚İ‚İ‚·‚é‚Ì‚ÉA–Ê“|‚Èİ’è‚Í‚¢‚è‚Ü‚¹‚ñ@—v‘f”‚Ívector.size()‚ÅŠm”F‚µ‚Ä‚­‚¾‚³‚¢•ÛØ‚Í‚µ‚Ü‚¹‚ñ
 	//*/
 	//GraphVec LoadDivGraph(const char* file,int xSize,int ySize);
 
 	///**
-	//*	@briefã€€å¼•æ•°ã«ã¨ã£ãŸãƒ™ã‚¯ã‚¿ãƒ¼ã«ã€ãƒ­ãƒ¼ãƒ‰ã—ãŸç”»åƒã‚’push_backã—ã¦ãã‚Œã¾ã™ã€€è¦ç´ æ•°ã¯vector.size()ã§ç¢ºèªã—ã¦ãã ã•ã„ä¿è¨¼ã¯ã—ã¾ã›ã‚“
+	//*	@brief@ˆø”‚É‚Æ‚Á‚½ƒxƒNƒ^[‚ÉAƒ[ƒh‚µ‚½‰æ‘œ‚ğpush_back‚µ‚Ä‚­‚ê‚Ü‚·@—v‘f”‚Ívector.size()‚ÅŠm”F‚µ‚Ä‚­‚¾‚³‚¢•ÛØ‚Í‚µ‚Ü‚¹‚ñ
 	//*/
 	//void LoadDivGraph(const char* file, int xSize, int ySize, GraphVec& vector);
 
 	///**
-	//*	@briefã€€ãƒ™ã‚¯ã‚¿ãƒ¼ã‚’ä½¿ã„ãŸããªã„é ‘å›ºãªäººã®ãŸã‚ã«ã€Graphã®é…åˆ—ã«å…¥ã‚Œã¦ãã‚Œã‚‹ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚‚ä½œã‚Šã¾ã—ãŸ
+	//*	@brief@ƒxƒNƒ^[‚ğg‚¢‚½‚­‚È‚¢ŠæŒÅ‚Èl‚Ì‚½‚ß‚ÉAGraph‚Ì”z—ñ‚É“ü‚ê‚Ä‚­‚ê‚éƒo[ƒWƒ‡ƒ“‚àì‚è‚Ü‚µ‚½
 	//*/
 	//void LoadDivGraph(const char* file, int xSize, int ySize, Graph* handleBuf);
 
 	/**
-	*	@briefã€€ç”»åƒã‚’åˆ†å‰²èª­ã¿è¾¼ã¿ã™ã‚‹ã®ã«ã€é¢å€’ãªè¨­å®šã¯ã„ã‚Šã¾ã›ã‚“ã€€è¦ç´ æ•°ã¯vector.size()ã§ç¢ºèªã—ã¦ãã ã•ã„ä¿è¨¼ã¯ã—ã¾ã›ã‚“
+	*	@brief@‰æ‘œ‚ğ•ªŠ„“Ç‚İ‚İ‚·‚é‚Ì‚ÉA–Ê“|‚Èİ’è‚Í‚¢‚è‚Ü‚¹‚ñ@—v‘f”‚Ívector.size()‚ÅŠm”F‚µ‚Ä‚­‚¾‚³‚¢•ÛØ‚Í‚µ‚Ü‚¹‚ñ
 	*/
 	GraphVec LoadDivGraph(const char* file, int allNum, int xNum, int yNum,int xSize,int ySize);
 
 	/**
-	*	@briefã€€å¼•æ•°ã«ã¨ã£ãŸãƒ™ã‚¯ã‚¿ãƒ¼ã«ã€ãƒ­ãƒ¼ãƒ‰ã—ãŸç”»åƒã‚’push_backã—ã¦ãã‚Œã¾ã™ã€€è¦ç´ æ•°ã¯vector.size()ã§ç¢ºèªã—ã¦ãã ã•ã„ä¿è¨¼ã¯ã—ã¾ã›ã‚“
+	*	@brief@ˆø”‚É‚Æ‚Á‚½ƒxƒNƒ^[‚ÉAƒ[ƒh‚µ‚½‰æ‘œ‚ğpush_back‚µ‚Ä‚­‚ê‚Ü‚·@—v‘f”‚Ívector.size()‚ÅŠm”F‚µ‚Ä‚­‚¾‚³‚¢•ÛØ‚Í‚µ‚Ü‚¹‚ñ
 	*/
 	void LoadDivGraph(const char* file, int allNum, int xNum, int yNum, int xSize, int ySize, GraphVec& vector);
 
 	/**
-	*	@briefã€€ãƒ™ã‚¯ã‚¿ãƒ¼ã‚’ä½¿ã„ãŸããªã„é ‘å›ºãªäººã®ãŸã‚ã«ã€Graphã®é…åˆ—ã«å…¥ã‚Œã¦ãã‚Œã‚‹ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚‚ä½œã‚Šã¾ã—ãŸ
+	*	@brief@ƒxƒNƒ^[‚ğg‚¢‚½‚­‚È‚¢ŠæŒÅ‚Èl‚Ì‚½‚ß‚ÉAGraph‚Ì”z—ñ‚É“ü‚ê‚Ä‚­‚ê‚éƒo[ƒWƒ‡ƒ“‚àì‚è‚Ü‚µ‚½
 	*/
 	void LoadDivGraph(const char* file, int allNum, int xNum, int yNum, int xSize, int ySize, Graph* handleBuf);
 }

@@ -1,4 +1,4 @@
-﻿#include "Memory.h"
+#include "Memory.h"
 
 #include <fstream>
 #include <string>

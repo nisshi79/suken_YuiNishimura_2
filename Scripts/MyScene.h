@@ -1,8 +1,8 @@
-﻿#pragma once
+#pragma once
 
 /**
 *	@file	MyScene.cpp
-*	@brief	シーンクラスの宣言は、ここでしましょう
+*	@brief	�V�[���N���X�̐錾�́A�����ł��܂��傤
 *	@author	-
 */
 

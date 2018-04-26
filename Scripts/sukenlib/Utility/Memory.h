@@ -1,10 +1,10 @@
-ï»¿#pragma once
+#pragma once
 
 #include <unordered_map>
 
 namespace suken {
 	/**
-	*	ã¨ã«ã‹ãã€ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ãªã©ã‚’ä¿å­˜ã™ã‚‹ã®ã«ç‰¹åŒ–ã—ãŸæ§‹é€ ä½“
+	*	‚Æ‚É‚©‚­AƒZ[ƒuƒf[ƒ^‚È‚Ç‚ğ•Û‘¶‚·‚é‚Ì‚É“Á‰»‚µ‚½\‘¢‘Ì
 	*/
 	struct Memory {
 	public:
@@ -16,11 +16,11 @@ namespace suken {
 		}
 
 		int& operator [](const char* key) {
-			return hashNumData[key];//èª­ã¿æ›¸ãå‡ºæ¥ã‚‹ã‚ˆã†ã«ã€ãªã„å ´åˆã¯ä½œæˆ
+			return hashNumData[key];//“Ç‚İ‘‚«o—ˆ‚é‚æ‚¤‚ÉA‚È‚¢ê‡‚Íì¬
 		}
 
 		std::string& operator ()(const char* key) {
-			return hashStrData[key];//èª­ã¿æ›¸ãå‡ºæ¥ã‚‹ã‚ˆã†ã«ã€ãªã„å ´åˆã¯ä½œæˆ
+			return hashStrData[key];//“Ç‚İ‘‚«o—ˆ‚é‚æ‚¤‚ÉA‚È‚¢ê‡‚Íì¬
 		}
 
 		int GetInt(unsigned int index) {
@@ -79,7 +79,7 @@ namespace suken {
 	};
 
 	/**
-	*	ã¨ã«ã‹ãã€å¤–éƒ¨ã‹ã‚‰ã¾ã¨ã¾ã£ãŸãƒ‡ãƒ¼ã‚¿ã‚’èª­ã¿è¾¼ã‚€ã®ã«ç‰¹åŒ–ã—ãŸæ§‹é€ ä½“
+	*	‚Æ‚É‚©‚­AŠO•”‚©‚ç‚Ü‚Æ‚Ü‚Á‚½ƒf[ƒ^‚ğ“Ç‚İ‚Ş‚Ì‚É“Á‰»‚µ‚½\‘¢‘Ì
 	*/
 	struct CSV {
 		struct Data {

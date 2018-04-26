@@ -1,8 +1,8 @@
-ï»¿#pragma once
+#pragma once
 
 /**
 *	@file	Scene.h
-*	@brief	è‰²ã€…è©°ã‚è¾¼ã¿ã™ããŸã€€åçœã¯ã—ã¦ã„ã‚‹ã€€å¾Œæ‚”ã¯ã—ã¦ã„ãªã„ã€€cppã¯åŠåˆ†ä»¥ä¸Šã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆåŠ¹æœã ã‚ˆ
+*	@brief	FX‹l‚ß‚İ‚·‚¬‚½@”½È‚Í‚µ‚Ä‚¢‚é@Œã‰÷‚Í‚µ‚Ä‚¢‚È‚¢@cpp‚Í”¼•ªˆÈãƒV[ƒ“Ø‚è‘Ö‚¦Œø‰Ê‚¾‚æ
 *	@author	Photon
 */
 
@@ -17,7 +17,7 @@
 
 namespace suken {
 	/**
-	*	@briefã€€å†…éƒ¨æ§‹é€ ä½“ã€€æ°—ã«ã—ãªãã¦ã„ã„ã‚ˆ
+	*	@brief@“à•”\‘¢‘Ì@‹C‚É‚µ‚È‚­‚Ä‚¢‚¢‚æ
 	*/
 	struct DrawMode {
 		unsigned char blendMode, param;
@@ -26,7 +26,7 @@ namespace suken {
 	};
 
 	/**
-	*	@briefã€€å†…éƒ¨æ§‹é€ ä½“ã€€ãƒ•ãƒªãƒƒãƒ—ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã¯ã€€Flip::ï½ã€€ã®ã‚ˆã†ã«æŒ‡å®šã™ã‚‹ã‚ˆ
+	*	@brief@“à•”\‘¢‘Ì@ƒtƒŠƒbƒvƒAƒjƒ[ƒVƒ‡ƒ“‚Í@Flip::`@‚Ì‚æ‚¤‚Éw’è‚·‚é‚æ
 	*/
 	struct Flip {
 		enum Type {
@@ -72,7 +72,7 @@ namespace suken {
 		Graph graph, graph2;
 		unsigned char gradate;
 		unsigned char speed;
-		unsigned char cnt;//countã®äº‹ã€‚ä½¿ç”¨ç‡ãƒ©ãƒ³ã‚­ãƒ³ã‚°ä¸Šä½ã«å…¥ã‚‹ã®ã§ã€ä¸‰å­—ç•¥å¤‰æ•°ã«æ®¿å ‚å…¥ã‚Š
+		unsigned char cnt;//count‚Ì–Bg—p—¦ƒ‰ƒ“ƒLƒ“ƒOãˆÊ‚É“ü‚é‚Ì‚ÅAOš—ª•Ï”‚É“a“°“ü‚è
 
 		friend class CGame;
 		friend class CScene;
@@ -80,179 +80,179 @@ namespace suken {
 	};
 
 	/**
-	*	@briefã€€ã‚·ãƒ¼ãƒ³ã‚¯ãƒ©ã‚¹ã ã‚ˆã€€FlipSceneã«ã¯ã“ã‚Œã®ç¶™æ‰¿ã‚¯ãƒ©ã‚¹ã‚’å…¥ã‚ŒãŸã‚‰ã„ã„ã‚ˆã€€å­ã‚·ãƒ¼ãƒ³ã‚’è¿½åŠ ã§ãã‚‹ã‚ˆ
+	*	@brief@ƒV[ƒ“ƒNƒ‰ƒX‚¾‚æ@FlipScene‚É‚Í‚±‚ê‚ÌŒp³ƒNƒ‰ƒX‚ğ“ü‚ê‚½‚ç‚¢‚¢‚æ@qƒV[ƒ“‚ğ’Ç‰Á‚Å‚«‚é‚æ
 	*/
 	class CScene {
 	public:
 		/**
-		*	@briefã€€æ—¢å®šã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@Šù’è‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^
 		*/
 		CScene();
 
 		/**
-		*	@briefã€€æœ€åˆã‹ã‚‰å­ã‚·ãƒ¼ãƒ³ã‚’æŒã¡ãŸã„ã¨ãã«ä½¿ã†
+		*	@brief@Å‰‚©‚çqƒV[ƒ“‚ğ‚¿‚½‚¢‚Æ‚«‚Ég‚¤
 		*/
 		CScene(CScene* scene);
 
 		/**
-		*	@briefã€€æœ€åˆã‹ã‚‰å­ã‚·ãƒ¼ãƒ³ã‚’æŒã¡ãŸã„ã¨ãã«ä½¿ã†ã€€ãƒ«ãƒ¼ãƒ«ç”»åƒä½¿ç”¨ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³
+		*	@brief@Å‰‚©‚çqƒV[ƒ“‚ğ‚¿‚½‚¢‚Æ‚«‚Ég‚¤@ƒ‹[ƒ‹‰æ‘œg—pƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“
 		*/
 		CScene(CScene* scene, const char* ruleGraph, unsigned char speed = 10, unsigned char gradate = 1);
 
 		/**
-		*	@briefã€€æœ€åˆã‹ã‚‰å­ã‚·ãƒ¼ãƒ³ã‚’æŒã¡ãŸã„ã¨ãã«ä½¿ã†ã€€ãƒ«ãƒ¼ãƒ«ç”»åƒäºŒã¤ä½¿ç”¨ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³
+		*	@brief@Å‰‚©‚çqƒV[ƒ“‚ğ‚¿‚½‚¢‚Æ‚«‚Ég‚¤@ƒ‹[ƒ‹‰æ‘œ“ñ‚Âg—pƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“
 		*/
 		CScene(CScene* scene, const char* ruleGraph, const char* ruleGraph2, unsigned char speed = 10, unsigned char gradate = 1);
 
 		/**
-		*	@briefã€€æœ€åˆã‹ã‚‰å­ã‚·ãƒ¼ãƒ³ã‚’æŒã¡ãŸã„ã¨ãã«ä½¿ã†ã€€Flip.ï½ã§æŒ‡å®šã™ã‚‹ã‚„ã¤
+		*	@brief@Å‰‚©‚çqƒV[ƒ“‚ğ‚¿‚½‚¢‚Æ‚«‚Ég‚¤@Flip.`‚Åw’è‚·‚é‚â‚Â
 		*/
 		CScene(CScene* scene, Flip::Type flipType, unsigned char speed = 10);
 
 		/**
-		*	@briefã€€ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		*	@brief@ƒfƒXƒgƒ‰ƒNƒ^
 		*/
 		virtual ~CScene();
 
 		/**
-		*	@briefã€€å­ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆ
+		*	@brief@qƒV[ƒ“Ø‚è‘Ö‚¦
 		*/
 		void FlipScene(CScene* scene);
 
 		/**
-		*	@briefã€€å­ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆã€€ãƒ«ãƒ¼ãƒ«ç”»åƒä½¿ç”¨ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³
+		*	@brief@qƒV[ƒ“Ø‚è‘Ö‚¦@ƒ‹[ƒ‹‰æ‘œg—pƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“
 		*/
 		void FlipScene(CScene* scene, const char* ruleGraph, unsigned char speed = 10, unsigned char gradate = 1);
 
 		/**
-		*	@briefã€€å­ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆã€€ãƒ«ãƒ¼ãƒ«ç”»åƒäºŒã¤ä½¿ç”¨ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³
+		*	@brief@qƒV[ƒ“Ø‚è‘Ö‚¦@ƒ‹[ƒ‹‰æ‘œ“ñ‚Âg—pƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“
 		*/
 		void FlipScene(CScene* scene, const char* ruleGraph, const char* ruleGraph2, unsigned char speed = 10, unsigned char gradate = 1);
 
 		/**
-		*	@briefã€€å­ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆã€€Flip.ï½ã§æŒ‡å®šã™ã‚‹ã‚„ã¤
+		*	@brief@qƒV[ƒ“Ø‚è‘Ö‚¦@Flip.`‚Åw’è‚·‚é‚â‚Â
 		*/
 		void FlipScene(CScene* scene, Flip::Type flipType, unsigned char speed = 10);
 
 		/**
-		*	@briefã€€å­ã‚·ãƒ¼ãƒ³å‰Šé™¤
+		*	@brief@qƒV[ƒ“íœ
 		*/
 		void RemoveScene();
 
 		/**
-		*	@briefã€€å­ã‚·ãƒ¼ãƒ³å‰Šé™¤ã€€ãƒ«ãƒ¼ãƒ«ç”»åƒä½¿ç”¨ãƒˆãƒ©ãƒ³ã‚·ã‚¸ãƒ§ãƒ³
+		*	@brief@qƒV[ƒ“íœ@ƒ‹[ƒ‹‰æ‘œg—pƒgƒ‰ƒ“ƒVƒWƒ‡ƒ“
 		*/
 		void RemoveScene(const char* ruleGraph, unsigned char speed = 10, unsigned char gradate = 1);
 
 		/**
-		*	@briefã€€å­ã‚·ãƒ¼ãƒ³å‰Šé™¤ã€€Flip.ï½ã§æŒ‡å®šã™ã‚‹ã‚„ã¤
+		*	@brief@qƒV[ƒ“íœ@Flip.`‚Åw’è‚·‚é‚â‚Â
 		*/
 		void RemoveScene(Flip::Type flipType, unsigned char speed = 10);
 
 		/**
-		*	@briefã€€ã‚·ãƒ¼ãƒ³ã®ãƒ–ãƒ¬ãƒ³ãƒ‰ãƒ¢ãƒ¼ãƒ‰ã‚’è¨­å®šã€€è©³ã—ãã¯DxLibã®SetDrawBlendModeã®ãƒªãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹ã‚’å‚ç…§
+		*	@brief@ƒV[ƒ“‚ÌƒuƒŒƒ“ƒhƒ‚[ƒh‚ğİ’è@Ú‚µ‚­‚ÍDxLib‚ÌSetDrawBlendMode‚ÌƒŠƒtƒ@ƒŒƒ“ƒX‚ğQÆ
 		*/
 		void SetBlendMode(unsigned char blendMode = DX_BLENDMODE_NOBLEND,unsigned char param = 255);
 
 		/**
-		*	@briefã€€ã‚·ãƒ¼ãƒ³ã®æç”»è¼åº¦ã‚’è¨­å®šã€€è©³ã—ãã¯DxLibã®SetDrawBrightã®ãƒªãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹ã‚’å‚ç…§
+		*	@brief@ƒV[ƒ“‚Ì•`‰æ‹P“x‚ğİ’è@Ú‚µ‚­‚ÍDxLib‚ÌSetDrawBright‚ÌƒŠƒtƒ@ƒŒƒ“ƒX‚ğQÆ
 		*/
 		void SetBright(unsigned char red,unsigned char green,unsigned char blue);
 
 		/**
-		*	@briefã€€æç”»ãƒ¢ãƒ¼ãƒ‰ã‚’å–å¾—ã€€nullptrã«æ³¨æ„
+		*	@brief@•`‰æƒ‚[ƒh‚ğæ“¾@nullptr‚É’ˆÓ
 		*/
 		DrawMode* GetDrawMode();
 
 		/**
-		*	@brief	èƒŒæ™¯ç”»åƒè¨­å®šã€€ä½¿ã†ãªã‚‰ã©ã†ã
+		*	@brief	”wŒi‰æ‘œİ’è@g‚¤‚È‚ç‚Ç‚¤‚¼
 		*/
 		void SetBackGround(const char* fileName);
 
 		struct Debug{
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã«æ–‡å­—åˆ—å‡ºåŠ›ã€€ä½¿ã£ãŸãƒ•ãƒ¬ãƒ¼ãƒ ã ã‘
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚É•¶š—ño—Í@g‚Á‚½ƒtƒŒ[ƒ€‚¾‚¯
 			*/
 			void Print(const char* name, const char* string);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã«ãƒ•ãƒ©ã‚°å‡ºåŠ›ã€€ä½¿ã£ãŸãƒ•ãƒ¬ãƒ¼ãƒ ã ã‘
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚Éƒtƒ‰ƒOo—Í@g‚Á‚½ƒtƒŒ[ƒ€‚¾‚¯
 			*/
 			void PrintFlag(const char* name, bool flag);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‹ã‚‰å®Ÿè¡Œã§ãã‚‹é–¢æ•°ã€€ã€€Startã§é–¢æ•°ã”ã¨ã«ä¸€åº¦ä½¿ã†
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚©‚çÀs‚Å‚«‚éŠÖ”@@Start‚ÅŠÖ”‚²‚Æ‚Éˆê“xg‚¤
 			*/
 			void RegistFunc(const char* name, std::function<void()> func);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‹ã‚‰å®Ÿè¡Œã§ãã‚‹é–¢æ•°ã€€ã€€Startã§é–¢æ•°ã”ã¨ã«ä¸€åº¦ä½¿ã†
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚©‚çÀs‚Å‚«‚éŠÖ”@@Start‚ÅŠÖ”‚²‚Æ‚Éˆê“xg‚¤
 			*/
 			//		void RegistFuncInt(const char* name, std::function<void(int)> func);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‹ã‚‰å®Ÿè¡Œã§ãã‚‹é–¢æ•°ã€€ã€€Startã§é–¢æ•°ã”ã¨ã«ä¸€åº¦ä½¿ã†
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚©‚çÀs‚Å‚«‚éŠÖ”@@Start‚ÅŠÖ”‚²‚Æ‚Éˆê“xg‚¤
 			*/
 			//		void RegistFuncDouble(const char* name, std::function<void(double)> func);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã«å¤‰æ•°å‡ºåŠ›ã€€Startã§å¤‰æ•°ã”ã¨ã«ä¸€åº¦ä½¿ã†ã€€ã‚·ãƒ¼ãƒ³ä¸­ã«æ¶ˆã™ãªã‚‰Removeä½¿ã†
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚É•Ï”o—Í@Start‚Å•Ï”‚²‚Æ‚Éˆê“xg‚¤@ƒV[ƒ“’†‚ÉÁ‚·‚È‚çRemoveg‚¤
 			*/
 			//		void Regist(const char* name, unsigned char* value);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã«å¤‰æ•°å‡ºåŠ›ã€€Startã§å¤‰æ•°ã”ã¨ã«ä¸€åº¦ä½¿ã†ã€€ã‚·ãƒ¼ãƒ³ä¸­ã«æ¶ˆã™ãªã‚‰Removeä½¿ã†
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚É•Ï”o—Í@Start‚Å•Ï”‚²‚Æ‚Éˆê“xg‚¤@ƒV[ƒ“’†‚ÉÁ‚·‚È‚çRemoveg‚¤
 			*/
 			void Regist(const char* name, int* value);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã«å¤‰æ•°å‡ºåŠ›ã€€Startã§å¤‰æ•°ã”ã¨ã«ä¸€åº¦ä½¿ã†ã€€ã‚·ãƒ¼ãƒ³ä¸­ã«æ¶ˆã™ãªã‚‰Removeä½¿ã†
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚É•Ï”o—Í@Start‚Å•Ï”‚²‚Æ‚Éˆê“xg‚¤@ƒV[ƒ“’†‚ÉÁ‚·‚È‚çRemoveg‚¤
 			*/
 			//	void Regist(const char* name, unsigned int* value);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã«å¤‰æ•°å‡ºåŠ›ã€€Startã§å¤‰æ•°ã”ã¨ã«ä¸€åº¦ä½¿ã†ã€€ã‚·ãƒ¼ãƒ³ä¸­ã«æ¶ˆã™ãªã‚‰Removeä½¿ã†
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚É•Ï”o—Í@Start‚Å•Ï”‚²‚Æ‚Éˆê“xg‚¤@ƒV[ƒ“’†‚ÉÁ‚·‚È‚çRemoveg‚¤
 			*/
 			void Regist(const char* name, float* value);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã«å¤‰æ•°å‡ºåŠ›ã€€Startã§å¤‰æ•°ã”ã¨ã«ä¸€åº¦ä½¿ã†ã€€ã‚·ãƒ¼ãƒ³ä¸­ã«æ¶ˆã™ãªã‚‰Removeä½¿ã†
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚É•Ï”o—Í@Start‚Å•Ï”‚²‚Æ‚Éˆê“xg‚¤@ƒV[ƒ“’†‚ÉÁ‚·‚È‚çRemoveg‚¤
 			*/
 			void Regist(const char* name, double* value);
 
 			/**
-			*	@brief	ãƒ‡ãƒãƒƒã‚°ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã«å¤‰æ•°å‡ºåŠ›ã€€Startã§å¤‰æ•°ã”ã¨ã«ä¸€åº¦ä½¿ã†ã€€ã‚·ãƒ¼ãƒ³ä¸­ã«æ¶ˆã™ãªã‚‰Removeä½¿ã†
+			*	@brief	ƒfƒoƒbƒOƒEƒCƒ“ƒhƒE‚É•Ï”o—Í@Start‚Å•Ï”‚²‚Æ‚Éˆê“xg‚¤@ƒV[ƒ“’†‚ÉÁ‚·‚È‚çRemoveg‚¤
 			*/
 			void Regist(const char* name, bool* value);
 
 			/**
-			*	@brief	å‹•çš„ç¢ºä¿ã—ãŸå¤‰æ•°ã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ•°ã¯æ¶ˆå»æ™‚ã«ä½¿ã†
+			*	@brief	“®“IŠm•Û‚µ‚½•Ï”AƒIƒuƒWƒFƒNƒg‚Ì•Ï”‚ÍÁ‹‚Ég‚¤
 			*/
 			//		void Remove(unsigned char* value);
 
 			/**
-			*	@brief	å‹•çš„ç¢ºä¿ã—ãŸå¤‰æ•°ã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ•°ã¯æ¶ˆå»æ™‚ã«ä½¿ã†
+			*	@brief	“®“IŠm•Û‚µ‚½•Ï”AƒIƒuƒWƒFƒNƒg‚Ì•Ï”‚ÍÁ‹‚Ég‚¤
 			*/
 			void Remove(int* value);
 
 			/**
-			*	@brief	å‹•çš„ç¢ºä¿ã—ãŸå¤‰æ•°ã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ•°ã¯æ¶ˆå»æ™‚ã«ä½¿ã†
+			*	@brief	“®“IŠm•Û‚µ‚½•Ï”AƒIƒuƒWƒFƒNƒg‚Ì•Ï”‚ÍÁ‹‚Ég‚¤
 			*/
 			//		void Remove(unsigned int* value);
 
 			/**
-			*	@brief	å‹•çš„ç¢ºä¿ã—ãŸå¤‰æ•°ã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ•°ã¯æ¶ˆå»æ™‚ã«ä½¿ã†
+			*	@brief	“®“IŠm•Û‚µ‚½•Ï”AƒIƒuƒWƒFƒNƒg‚Ì•Ï”‚ÍÁ‹‚Ég‚¤
 			*/
 			void Remove(float* value);
 
 			/**
-			*	@brief	å‹•çš„ç¢ºä¿ã—ãŸå¤‰æ•°ã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ•°ã¯æ¶ˆå»æ™‚ã«ä½¿ã†
+			*	@brief	“®“IŠm•Û‚µ‚½•Ï”AƒIƒuƒWƒFƒNƒg‚Ì•Ï”‚ÍÁ‹‚Ég‚¤
 			*/
 			void Remove(double* value);
 
 			/**
-			*	@brief	å‹•çš„ç¢ºä¿ã—ãŸå¤‰æ•°ã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å¤‰æ•°ã¯æ¶ˆå»æ™‚ã«ä½¿ã†
+			*	@brief	“®“IŠm•Û‚µ‚½•Ï”AƒIƒuƒWƒFƒNƒg‚Ì•Ï”‚ÍÁ‹‚Ég‚¤
 			*/
 			void Remove(bool* value);
 		private:
@@ -280,31 +280,31 @@ namespace suken {
 		CScene(bool fake);
 
 		/**
-		*	@briefã€€FlipSceneæ™‚ã«å®Ÿè¡Œã•ã‚Œã‚‹ã€‚åˆæœŸåŒ–ç”¨ã€€ä»®æƒ³é–¢æ•°ã€€
+		*	@brief@FlipScene‚ÉÀs‚³‚ê‚éB‰Šú‰»—p@‰¼‘zŠÖ”@
 		*/
 		virtual void Start();
 
 		void Update();
 
 		/**
-		*	@briefã€€æ¯ãƒ•ãƒ¬ãƒ¼ãƒ å®Ÿè¡Œã€€ä»®æƒ³é–¢æ•°
+		*	@brief@–ˆƒtƒŒ[ƒ€Às@‰¼‘zŠÖ”
 		*/
 		virtual void Loop();
 
 		void Graphic();
 
 		/**
-		*	@briefã€€æ¯ãƒ•ãƒ¬ãƒ¼ãƒ å®Ÿè¡Œã€€æç”»ç”¨ã€€ä»®æƒ³é–¢æ•°
+		*	@brief@–ˆƒtƒŒ[ƒ€Às@•`‰æ—p@‰¼‘zŠÖ”
 		*/
 		virtual void Draw();
 
 		/**
-		*	@briefã€€æ¯ãƒ•ãƒ¬ãƒ¼ãƒ ã®æœ€å¾Œã«å®Ÿè¡Œã€€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®å‰Šé™¤å‡¦ç†
+		*	@brief@–ˆƒtƒŒ[ƒ€‚ÌÅŒã‚ÉÀs@ƒIƒuƒWƒFƒNƒg‚Ìíœˆ—
 		*/
 		void LoopEnd();
 
 		/**
-		*	@briefã€€ã‚·ãƒ¼ãƒ³ãŒä¸Šæ›¸ãã•ã‚ŒãŸã¨ãã«å®Ÿè¡Œã€‚å¾Œå‡¦ç†ç”¨ã€€ä»®æƒ³é–¢æ•°
+		*	@brief@ƒV[ƒ“‚ªã‘‚«‚³‚ê‚½‚Æ‚«‚ÉÀsBŒãˆ——p@‰¼‘zŠÖ”
 		*/
 		virtual void End();
 
@@ -321,7 +321,7 @@ namespace suken {
 		unsigned char flag;
 
 		/**
-		*	@briefã€€ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãªã„ã€€ç‹¬è‡ªã®ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ãˆåŠ¹æœã‚’ä½œã‚ŠãŸã„äººã¯ã€ã‚³ãƒ¼ãƒ‰ã‚’å®Œå…¨ã«ç†è§£ã—ãŸã†ãˆã§ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã™ã‚Œã°ã„ã„ã¨æ€ã„ã¾ã™ã€€ãƒã‚°ã£ã¦ã‚‚è²¬ä»»ã¯å–ã‚Šã¾ã›ã‚“
+		*	@brief@ƒI[ƒo[ƒ‰ƒCƒh‚µ‚È‚¢@“Æ©‚ÌƒV[ƒ“Ø‚è‘Ö‚¦Œø‰Ê‚ğì‚è‚½‚¢l‚ÍAƒR[ƒh‚ğŠ®‘S‚É—‰ğ‚µ‚½‚¤‚¦‚ÅƒI[ƒo[ƒ‰ƒCƒh‚·‚ê‚Î‚¢‚¢‚Æv‚¢‚Ü‚·@ƒoƒO‚Á‚Ä‚àÓ”C‚Íæ‚è‚Ü‚¹‚ñ
 		*/
 		virtual bool FlipTransition();
 

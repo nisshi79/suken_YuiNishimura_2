@@ -1,4 +1,4 @@
-ï»¿#pragma once
+#pragma once
 
 #include "../Suken.h"
 #include <list>
@@ -138,7 +138,7 @@ public:
 		}
 	}
 	CTextWindow() {
-		font.Set("MS Pæ˜æœ", 24, 9, DX_FONTTYPE_ANTIALIASING);
+		font.Set("MS P–¾’©", 24, 9, DX_FONTTYPE_ANTIALIASING);
 
 		window = "SukenLibAsset/TextWindow.png";
 		arrow = "SukenLibAsset/TextArrow.png";
@@ -160,7 +160,7 @@ public:
 	}
 	CTextWindow(const char* text) {
 
-		font.Set("MS Pæ˜æœ", 24, 9, DX_FONTTYPE_ANTIALIASING);
+		font.Set("MS P–¾’©", 24, 9, DX_FONTTYPE_ANTIALIASING);
 
 		window = "SukenLibAsset/TextWindow.png";
 		arrow = "SukenLibAsset/TextArrow.png";
@@ -183,13 +183,13 @@ public:
 		std::string buf = "";
 		char charBuf[2];
 
-		while (*text != '\0') {//text ã®å…ˆé ­ãŒçµ‚ç«¯æ–‡å­—ã‹ãƒã‚§ãƒƒã‚¯
+		while (*text != '\0') {//text ‚Ìæ“ª‚ªI’[•¶š‚©ƒ`ƒFƒbƒN
 
 
-			if (IsDBCSLeadByte(*text) != 0) {//å…ˆè¡Œãƒã‚¤ãƒˆåˆ¤å®š
+			if (IsDBCSLeadByte(*text) != 0) {//æsƒoƒCƒg”»’è
 				charBuf[0] = text[0];
 				charBuf[1] = text[1];
-				text += 2;//äºŒæ–‡å­—åˆ†ãšã‚‰ã™
+				text += 2;//“ñ•¶š•ª‚¸‚ç‚·
 				if (font.GetWidth((buf).c_str(), buf.size()) + font.GetWidth(charBuf, 2) < SWidth) {
 					buf += charBuf[0];
 					buf += charBuf[1];
@@ -203,7 +203,7 @@ public:
 			}
 			else {
 				charBuf[0] = text[0];
-				text += 1;//ä¸€æ–‡å­—åˆ†ãšã‚‰ã™
+				text += 1;//ˆê•¶š•ª‚¸‚ç‚·
 
 				if (charBuf[0] == '\n') {
 					texts.push(buf);
@@ -230,13 +230,13 @@ public:
 		std::string buf = "";
 		char charBuf[2];
 
-		while (*text != '\0') {//text ã®å…ˆé ­ãŒçµ‚ç«¯æ–‡å­—ã‹ãƒã‚§ãƒƒã‚¯
+		while (*text != '\0') {//text ‚Ìæ“ª‚ªI’[•¶š‚©ƒ`ƒFƒbƒN
 
 
-			if (IsDBCSLeadByte(*text) != 0) {//å…ˆè¡Œãƒã‚¤ãƒˆåˆ¤å®š
+			if (IsDBCSLeadByte(*text) != 0) {//æsƒoƒCƒg”»’è
 				charBuf[0] = text[0];
 				charBuf[1] = text[1];
-				text += 2;//äºŒæ–‡å­—åˆ†ãšã‚‰ã™
+				text += 2;//“ñ•¶š•ª‚¸‚ç‚·
 				if (font.GetWidth((buf).c_str(), buf.size()) + font.GetWidth(charBuf, 2) < SWidth) {
 					buf += charBuf[0];
 					buf += charBuf[1];
@@ -251,7 +251,7 @@ public:
 			}
 			else {
 				charBuf[0] = text[0];
-				text += 1;//ä¸€æ–‡å­—åˆ†ãšã‚‰ã™
+				text += 1;//ˆê•¶š•ª‚¸‚ç‚·
 
 				if (charBuf[0] == '\n') {
 					texts.push(buf);

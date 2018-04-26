@@ -1,4 +1,4 @@
-﻿#include "MyScene.h"
+#include "MyScene.h"
 
 void CSTitle::Start() {
 	SetBackGround("pic/title.png");

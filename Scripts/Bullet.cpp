@@ -1,4 +1,4 @@
-﻿#include "Bullet.h"
+#include "Bullet.h"
 
 float DTR(float deg) {
 	return (float)(deg*DX_PI) / 180.0;

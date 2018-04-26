@@ -1,4 +1,4 @@
-ï»¿#include"MCE.h"
+#include"MCE.h"
 #include <sys/stat.h>
 
 suken::MCE::MCE() {
@@ -135,7 +135,7 @@ const int& suken::MCE::operator()(Layer::LayerData layer, int x, int y)const {
 int suken::MCE::Array(char layer, int x, int y)const {
 //#ifdef DEBUG
 //	if (layer >= 3 || x >= width || y >= height) {
-//		WarningSK("MCE-è­¦å‘Šï¼šæ•°å€¤ãŒå¤§ãã™ãã¾ã™ã€‚å¼·åˆ¶çµ‚äº†ã—ã¾ã™");
+//		WarningSK("MCE-ŒxF”’l‚ª‘å‚«‚·‚¬‚Ü‚·B‹­§I—¹‚µ‚Ü‚·");
 //		exit(1);
 //
 //	}

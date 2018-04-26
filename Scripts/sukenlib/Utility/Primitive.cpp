@@ -1,4 +1,4 @@
-ï»¿#include "Primitive.h"
+#include "Primitive.h"
 #include <math.h>
 #include <DxLib.h>
 
@@ -148,7 +148,7 @@ bool suken::HitRectRectF(const RectF& r1, const RectF& r2) {
 	return r1.right > r2.left && r2.right > r1.left && r1.bottom > r2.top && r2.bottom > r1.top;
 }
 
-void suken::HitMRectRect(int& x, int& y, int& vx, int& vy, const Rect& r1, const Rect& r2, const RectFlag& enable, RectFlag& flag) {//é€Ÿåº¦ã¯è¶³ã—åˆã‚ã›ãŸå¾Œã‚’æƒ³å®š
+void suken::HitMRectRect(int& x, int& y, int& vx, int& vy, const Rect& r1, const Rect& r2, const RectFlag& enable, RectFlag& flag) {//‘¬“x‚Í‘«‚µ‡‚í‚¹‚½Œã‚ğ‘z’è
 	Int2 vec = { x,y };
 
 	if (HitRectRect(r1 + vec, r2)) {

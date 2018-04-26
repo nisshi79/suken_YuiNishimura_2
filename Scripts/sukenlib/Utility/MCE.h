@@ -1,4 +1,4 @@
-ï»¿#pragma once
+#pragma once
 
 #include"Data.h"
 
@@ -18,8 +18,8 @@ namespace suken {
 		MCE(const char* file);
 
 		/**
-		*	FILEï¼šmcepicã¨ã€ãã®ä»–ã®mceãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ã‚‹å ´æ‰€ã‚’æŒ‡å®š
-		*	indexï¼šmceã‚’é–‹ã„ãŸæ™‚ã®ä¸Šã‹ã‚‰ï¼ï¼Œï¼‘ï¼Œï¼’....ã¨æ•°ãˆãŸç•ªå·
+		*	FILEFmcepic‚ÆA‚»‚Ì‘¼‚Ìmceƒtƒ@ƒCƒ‹‚ª‚ ‚éêŠ‚ğw’è
+		*	indexFmce‚ğŠJ‚¢‚½‚Ìã‚©‚ç‚OC‚PC‚Q....‚Æ”‚¦‚½”Ô†
 		*/
 		MCE(const char* FILE,unsigned int index);
 

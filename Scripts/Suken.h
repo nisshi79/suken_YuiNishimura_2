@@ -1,8 +1,8 @@
-ï»¿#pragma once
+#pragma once
 
 /**
 *	@file	suken.h
-*	@brief	#include "suken.h" ã‚’ã™ã‚‹ã¨ã€sukenlibObjectiveã®æ©Ÿèƒ½ãŒä½¿ãˆã¾ã™
+*	@brief	#include "suken.h" ‚ğ‚·‚é‚ÆAsukenlibObjective‚Ì‹@”\‚ªg‚¦‚Ü‚·
 *	@author	Photon
 */
 

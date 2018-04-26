@@ -1,26 +1,26 @@
-ï»¿#include "Suken.h"
+#include "Suken.h"
 #include "MyScene.h"
 
 /**
 *	@file	Main.cpp
-*	@brief	åˆæœŸè¨­å®šã‚’ã—ãŸã‚Šã€Game.Init()ã‚’æ›¸ã„ãŸã‚Šã€æ©Ÿèƒ½è¿½åŠ ã®è¨­å®šã‚’ã™ã‚‹ã¨ã“ã‚ã§ã™
+*	@brief	‰Šúİ’è‚ğ‚µ‚½‚èAGame.Init()‚ğ‘‚¢‚½‚èA‹@”\’Ç‰Á‚Ìİ’è‚ğ‚·‚é‚Æ‚±‚ë‚Å‚·
 *	@author	-
 */
 
 SystemSetting suken::Config() {
-	SystemSetting setting; //è¨­å®šç”¨æ§‹é€ ä½“ã€€System.Awake()ã«æ¸¡ã™ãŸã‚ã®ã‚‚ã®
+	SystemSetting setting; //İ’è—p\‘¢‘Ì@System.Awake()‚É“n‚·‚½‚ß‚Ì‚à‚Ì
 
-	/////////////ï¼œï¼œã“ã“ã‚ˆã‚Šã—ãŸåˆæœŸè¨­å®šã«ã¤ãã€è‡ªç”±ã«è§¦ã£ã¦ã‚ˆã—ï¼ï¼//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	/////////////ƒƒ‚±‚±‚æ‚è‚µ‚½‰Šúİ’è‚É‚Â‚«A©—R‚ÉG‚Á‚Ä‚æ‚µ„„//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	setting.WindowSyle = 0;						//ã€€0:æ™®é€šã®ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã€1:ã‚¿ã‚¤ãƒˆãƒ«ãƒãƒ¼ãªã—ã€ç¸ã‚ã‚Šã€2:ã‚¿ã‚¤ãƒˆãƒ«ãƒãƒ¼ã€ç¸ãªã—ã€‚
-	setting.isWindow = true;					//	ãƒ•ãƒ«ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã«ã™ã‚‹ã‹ã©ã†ã‹ã®ãƒ•ãƒ©ã‚°ã€€trueãªã‚‰è§£åƒåº¦ã¯640*480ã«å¤‰æ›´ã•ã‚Œã‚‹
-	setting.WindowText = "SukenlibObjective";	//ã€€å·¦ä¸Šã®ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ãƒ†ã‚­ã‚¹ãƒˆ
-	setting.iconID = 101;						//	åŸºæœ¬å¼„ã‚‰ãªãã¦ã„ã„ã‚ˆ
-	setting.SetWindowSize(800, 600);			//	ç”»é¢ã‚µã‚¤ã‚ºè¨­å®š
-	setting.targetFps = 60.0f;					//	ç›®æ¨™fpsè¨­å®š
-	setting.startLoadingMinTime = 00;			//	æœ€åˆã®æœ€çŸ­ãƒ­ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°æ™‚é–“
-	setting.startGraphPath = "SukenLibAsset/LOGO/LOGO.png";	//æœ€åˆã®ãƒ­ãƒ¼ãƒ‰ä¸­ã«è¡¨ç¤ºã™ã‚‹ç”»åƒ
-	setting.SetLoadingGraph("SukenLibAsset/LOGO/loading.png", 408, 64, 10, 392, 536);	//ãƒ­ãƒ¼ãƒ‰ä¸­ã«è¡¨ç¤ºã™ã‚‹ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ã€€å¼•æ•°(ãƒ•ã‚¡ã‚¤ãƒ«åã€pixelå¹…ã€pixelé«˜ã•ã€ç”»åƒåˆ‡ã‚Šæ›¿ãˆæ™‚é–“ã€è¡¨ç¤ºåº§æ¨™)
+	setting.WindowSyle = 0;						//@0:•’Ê‚ÌƒEƒCƒ“ƒhƒEA1:ƒ^ƒCƒgƒ‹ƒo[‚È‚µA‰‚ ‚èA2:ƒ^ƒCƒgƒ‹ƒo[A‰‚È‚µB
+	setting.isWindow = true;					//	ƒtƒ‹ƒXƒNƒŠ[ƒ“‚É‚·‚é‚©‚Ç‚¤‚©‚Ìƒtƒ‰ƒO@true‚È‚ç‰ğ‘œ“x‚Í640*480‚É•ÏX‚³‚ê‚é
+	setting.WindowText = "SukenlibObjective";	//@¶ã‚ÌƒEƒCƒ“ƒhƒEƒeƒLƒXƒg
+	setting.iconID = 101;						//	Šî–{˜M‚ç‚È‚­‚Ä‚¢‚¢‚æ
+	setting.SetWindowSize(800, 600);			//	‰æ–ÊƒTƒCƒYİ’è
+	setting.targetFps = 60.0f;					//	–Ú•Wfpsİ’è
+	setting.startLoadingMinTime = 00;			//	Å‰‚ÌÅ’Zƒ[ƒfƒBƒ“ƒOŠÔ
+	setting.startGraphPath = "SukenLibAsset/LOGO/LOGO.png";	//Å‰‚Ìƒ[ƒh’†‚É•\¦‚·‚é‰æ‘œ
+	setting.SetLoadingGraph("SukenLibAsset/LOGO/loading.png", 408, 64, 10, 392, 536);	//ƒ[ƒh’†‚É•\¦‚·‚éƒAƒjƒ[ƒVƒ‡ƒ“@ˆø”(ƒtƒ@ƒCƒ‹–¼Apixel•Apixel‚‚³A‰æ‘œØ‚è‘Ö‚¦ŠÔA•\¦À•W)
 //	setting.SetLoadingGraph();
 	setting.isLaunchar = false;
 
@@ -29,24 +29,24 @@ SystemSetting suken::Config() {
 
 	setting.InitScene(new CSTitle(), Flip::SCALEDOWN_ROTATION_RIGHT, 7);
 
-	////////////ï¼œï¼œåˆæœŸè¨­å®šã“ã“ã¾ã§ï¼ï¼/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////ƒƒ‰Šúİ’è‚±‚±‚Ü‚Å„„/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	return setting;//è§¦ã‚‰ãªã„ã§ãã ã•ã„
+	return setting;//G‚ç‚È‚¢‚Å‚­‚¾‚³‚¢
 }
 
-//åˆæœŸåŒ–ç”¨ã€‚ã»ã¼åˆæœŸã‚·ãƒ¼ãƒ³è¨­å®šç”¨
+//‰Šú‰»—pB‚Ù‚Ú‰ŠúƒV[ƒ“İ’è—p
 void suken::Awake() {
 	Game.Debug().RegistFunc("GoTitle", [] {
 		Game.FlipScene(new CSTitle);
 	});
 }
 
-//ãƒ‡ãƒãƒƒã‚°ç”¨ã€€ã‚·ãƒ¼ãƒ³ã‚ˆã‚Šã‚‚å…ˆã«å®Ÿè¡Œã•ã‚Œã‚‹
+//ƒfƒoƒbƒO—p@ƒV[ƒ“‚æ‚è‚àæ‚ÉÀs‚³‚ê‚é
 void suken::DebugLoopEnter() {
 
 }
 
-//ãŠãªã˜ããƒ‡ãƒãƒƒã‚°ç”¨ã€€ã‚·ãƒ¼ãƒ³ã®å¾Œã«å®Ÿè¡Œã•ã‚Œã‚‹
+//‚¨‚È‚¶‚­ƒfƒoƒbƒO—p@ƒV[ƒ“‚ÌŒã‚ÉÀs‚³‚ê‚é
 void suken::DebugLoopExit() {
 
 }

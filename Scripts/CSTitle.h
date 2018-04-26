@@ -1,16 +1,16 @@
-﻿#pragma once
+#pragma once
 
 #include "Suken.h"
 
 class CSTitle :public CScene {
-	//～変数宣言～
+	//�`�ϐ��錾�`
 
-	//初期化　画像のロードなども
+	//�������@�摜�̃��[�h�Ȃǂ�
 	void Start();
-	//処理　毎フレーム呼ばれる
+	//�����@���t���[���Ă΂��
 	void Loop();
-	//描画　毎フレーム呼ばれる
+	//�`��@���t���[���Ă΂��
 	void Draw();
-	//後片付け	FlipSceneされた時に呼び出される
+	//��Еt��	FlipScene���ꂽ���ɌĂяo�����
 	void End();
 };
