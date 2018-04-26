@@ -1,4 +1,6 @@
 #include "Bullet.h"
+#include "KeyConfig.h"
+KeyConfig keyconfig;
 
 float DTR(float deg) {
 	return (float)(deg*DX_PI) / 180.0;
@@ -42,7 +44,7 @@ CBulletManager::CBulletManager() {
 }
 
 void CBulletManager::Appear(int x, int y) {
-	if (Input.GetKeyDown(Input.key.D) && time%20 == 0)
+	if (keyconfig.Shot() && time%20 == 0)
 		bullets.push_back(CBullet(x, y, BULLET_SPEED));
 	time++;
 }

@@ -2,9 +2,11 @@
 #include "Suken.h"
 
 class KeyConfig {
-private:
-	//Controls
-	bool left,right,top,bottom;
 public:
-	
+	bool Up();
+	bool Down();
+	bool Right();
+	bool Left();
+
+	bool Shot();
 };

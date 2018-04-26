@@ -2,7 +2,7 @@
 #include "Bullet.h"
 #include "KeyConfig.h"
 extern CBulletManager GetBulletManager();
-
+KeyConfig keyconfig;
 CJiki::CJiki() {
 	x = 100;
 	y = 300;
@@ -16,9 +16,8 @@ void CJiki::Fric(double& v, double flic){
 }
 
 void CJiki::Move() {
-	if (Input.GetKeyDown(Input.key.RIGHT))vx += ACCEL;
-	if (Input.GetKeyDown(Input.key.LEFT))vx -= ACCEL;
-	if (Input.GetKeyDown(Input.key.UP))vy -= ACCEL;
+	if (keyconfig.Right())vx += ACCEL;
+	if (keyconfig.Left())vx -= ACCEL;
 	
 	if (vx > VELOCITY_LIMIT)vx = VELOCITY_LIMIT;
 	if (vx < -VELOCITY_LIMIT)vx = -VELOCITY_LIMIT;
