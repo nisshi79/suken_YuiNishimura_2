@@ -74,3 +74,4 @@ void CBulletManager::Draw() {
 //	}
 //	return false;
 //}
+CBulletManager bullet;

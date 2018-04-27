@@ -1,8 +1,10 @@
 #include "MyScene.h"
 
-CBulletManager bullet;
-CJiki jiki;
-CMap map;
+
+
+extern CMap map;
+extern CJiki jiki;
+extern CBulletManager bullet;
 
 void CSGame::Start() {
 	map.Set();

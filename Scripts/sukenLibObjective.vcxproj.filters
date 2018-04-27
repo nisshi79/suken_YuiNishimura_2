@@ -29,6 +29,12 @@
     <Filter Include="シーン ファイル">
       <UniqueIdentifier>{468a6a31-9e15-4c0a-83df-b8d89b02b207}</UniqueIdentifier>
     </Filter>
+    <Filter Include="メイン ファイル\Util">
+      <UniqueIdentifier>{8dc7da2b-f067-4d12-bd1d-52dc972f1d57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="メイン ファイル\Obj">
+      <UniqueIdentifier>{a85cb0eb-985c-48f5-b203-76b497c3689b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Suken.h">
@@ -91,20 +97,23 @@
     <ClInclude Include="CSGame.h">
       <Filter>シーン ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.h">
-      <Filter>メイン ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="jiki.h">
-      <Filter>メイン ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>メイン ファイル</Filter>
+    <ClInclude Include="Scroll.h">
+      <Filter>メイン ファイル\Util</Filter>
     </ClInclude>
     <ClInclude Include="KeyConfig.h">
-      <Filter>メイン ファイル</Filter>
+      <Filter>メイン ファイル\Util</Filter>
     </ClInclude>
-    <ClInclude Include="Scroll.h">
-      <Filter>メイン ファイル</Filter>
+    <ClInclude Include="jiki.h">
+      <Filter>メイン ファイル\Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>メイン ファイル\Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>メイン ファイル\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>メイン ファイル\Obj</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -159,20 +168,23 @@
     <ClCompile Include="CSGame.cpp">
       <Filter>シーン ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>メイン ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="jiki.cpp">
-      <Filter>メイン ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>メイン ファイル</Filter>
+    <ClCompile Include="Scroll.cpp">
+      <Filter>メイン ファイル\Util</Filter>
     </ClCompile>
     <ClCompile Include="KeyConfig.cpp">
-      <Filter>メイン ファイル</Filter>
+      <Filter>メイン ファイル\Util</Filter>
     </ClCompile>
-    <ClCompile Include="Scroll.cpp">
-      <Filter>メイン ファイル</Filter>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>メイン ファイル\Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="jiki.cpp">
+      <Filter>メイン ファイル\Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>メイン ファイル\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>メイン ファイル\Obj</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

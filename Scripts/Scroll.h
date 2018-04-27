@@ -4,7 +4,10 @@
 class Scroll {
 private:
 	int x;
+	static const int BACK_POINT=50;
+	static const int FORWARD_POINT=400;
+	static const int DELAY_FLAMES = 30;
 public:
-	int GetX();
-	void xScroll(int x,int back, int forward,bool backFlag=false);
+	
+	int xScroll(bool backFlag = true);
 };

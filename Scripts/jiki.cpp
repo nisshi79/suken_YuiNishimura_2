@@ -1,7 +1,10 @@
 #include "jiki.h"
 #include "Bullet.h"
+#include "Scroll.h"
+#include "Physics.h"
+extern Scroll scroll;
 extern KeyConfig keyconfig;
-
+extern Physics physics;
 extern CBulletManager GetBulletManager();
 
 CJiki::CJiki() {
@@ -10,43 +13,30 @@ CJiki::CJiki() {
 	landFlag = true;
 }
 
-void CJiki::Fric(double& v, double flic){
-	if (v<flic && v>-flic)v = 0;
-	if (v >= flic)v -= flic;
-	if (v <= -flic)v += flic;
-}
-
 void CJiki::Move() {
-	if (keyconfig.Right())vx += ACCEL;
-	if (keyconfig.Left())vx -= ACCEL;
-	
-	if (vx > VELOCITY_LIMIT)vx = VELOCITY_LIMIT;
-	if (vx < -VELOCITY_LIMIT)vx = -VELOCITY_LIMIT;
-	
-	if(landFlag)Fric(vx, LAND_FRIC);
-	if(!landFlag)Fric(vx, AIR_FRIC);
+	if (keyconfig.Right())physics.Accel(vx,RIGHT,ACCEL,VELOCITY_LIMIT);
+	if (keyconfig.Left())physics.Accel(vx, LEFT, ACCEL, VELOCITY_LIMIT);
+		
+	if(landFlag)physics.Fric(vx, LAND_FRIC);
+	if(!landFlag)physics.Fric(vx, AIR_FRIC);
 	
 	x += vx;
 
-	/*this->Gravity();*/
+	
 	if(y==300+SIZE)landFlag = true;
-}
-
-void CJiki::Gravity(){
-	if(vy<VELOCITY_LIMIT)vy += G;
+	
+	//temp
 	if (y + vy + 50 > 600) {
 		y = 600;
 		vy = 0;
-		
 	}
-		y += vy;
-
-	//temp
-	
+	y += vy;
 }
 
+
+
 void CJiki::Draw() {
-	DrawBox(x, y, x + SIZE, y + SIZE, RED, true);
+	DrawBox(x-scroll.xScroll(x), y, x + SIZE - scroll.xScroll(x) , y + SIZE, RED, true);
 }
 
 //bool CJiki::Hit() {
@@ -69,3 +59,5 @@ int CJiki::GetGunX(){
 int CJiki::GetGunY(){
 	return y + 25;
 }
+
+CJiki jiki;

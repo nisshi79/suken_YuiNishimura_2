@@ -7,7 +7,8 @@
 
 class CSGame :public CScene {
 	//`•Ï”éŒ¾`
-
+	
+	
 	
 	//‰Šú‰»@‰æ‘œ‚Ìƒ[ƒh‚È‚Ç‚à
 	void Start();

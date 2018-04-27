@@ -4,7 +4,8 @@
 class CJiki {
 private:
 	const double SCALE=4;
-	double x, y, vy, vx;
+	int x, y;
+	double vy, vx;
 	const int SIZE = 50;
 	const double G = 1;
 	const int VELOCITY_LIMIT = 10;
@@ -15,9 +16,7 @@ private:
 	Rect rect;
 public:
 	CJiki();
-	void Fric(double& v,double flic);
 	void Move();
-	void Gravity();
 	void Draw();
 	/*bool Hit();*/
 	int GetX(),GetY();

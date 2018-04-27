@@ -1,10 +1,11 @@
 #include "Scroll.h"
+#include "jiki.h"
+extern CJiki jiki;
 
-int Scroll::GetX(){
-	return x;
-}
-void Scroll::xScroll(int x, int back, int forward, bool backFlag=true)
+int Scroll::xScroll(bool backFlag)
 {
-	if (x < back);
+	if (jiki.GetX() < this->x + BACK_POINT && backFlag)this->x=jiki.GetX()-BACK_POINT;
+	if (jiki.GetX() > this->x + FORWARD_POINT)this->x = jiki.GetX() - FORWARD_POINT;
+	return this->x;
 }
 Scroll scroll;
