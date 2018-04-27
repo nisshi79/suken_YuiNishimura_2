@@ -3,13 +3,13 @@
 
 class CJiki {
 private:
-	const double SCALE=30;
+	const double SCALE=4;
 	double x, y, vy, vx;
 	const int SIZE = 50;
 	const double G = 1;
 	const int VELOCITY_LIMIT = 10;
-	const double ACCEL=2*SCALE;
-	const double AIR_FRIC=0.3;
+	const double ACCEL=20*SCALE;
+	const double AIR_FRIC=0.3*SCALE;
 	const double LAND_FRIC = 0.5*SCALE;
 	bool landFlag;
 	Rect rect;

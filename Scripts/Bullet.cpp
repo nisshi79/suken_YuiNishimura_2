@@ -44,7 +44,7 @@ CBulletManager::CBulletManager() {
 }
 
 void CBulletManager::Appear(int x, int y) {
-	if (keyconfig.Shot() && time%20 == 0)
+	if (keyconfig.Shot() && time%5 == 0)
 		bullets.push_back(CBullet(x, y, BULLET_SPEED));
 	time++;
 }

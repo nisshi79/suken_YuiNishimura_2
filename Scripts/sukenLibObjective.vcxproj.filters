@@ -103,6 +103,9 @@
     <ClInclude Include="KeyConfig.h">
       <Filter>メイン ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Scroll.h">
+      <Filter>メイン ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -166,6 +169,9 @@
       <Filter>メイン ファイル</Filter>
     </ClCompile>
     <ClCompile Include="KeyConfig.cpp">
+      <Filter>メイン ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Scroll.cpp">
       <Filter>メイン ファイル</Filter>
     </ClCompile>
   </ItemGroup>

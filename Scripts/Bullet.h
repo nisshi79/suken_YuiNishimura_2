@@ -5,12 +5,12 @@
 
 
 
-static int BULLET_SPEED = 15;
+static int BULLET_SPEED = 20;
 
 class CBullet {
 private:
-	int v;
-	float x, y;
+	double v;
+	double x, y;
 	const int R = 10;
 	bool deleteFlag;
 public:

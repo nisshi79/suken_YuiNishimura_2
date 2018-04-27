@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Scroll.h" />
     <ClInclude Include="CSGame.h" />
     <ClInclude Include="CSTitle.h" />
     <ClInclude Include="jiki.h" />
@@ -51,6 +52,7 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\DxLib_VC\dxlib</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">C:\DxLib_VC\dxlib</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="Scroll.cpp" />
     <ClCompile Include="CSGame.cpp" />
     <ClCompile Include="CSTitle.cpp" />
     <ClCompile Include="jiki.cpp" />

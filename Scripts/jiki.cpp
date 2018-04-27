@@ -7,7 +7,7 @@ extern CBulletManager GetBulletManager();
 CJiki::CJiki() {
 	x = 100;
 	y = 300;
-	landFlag = false;
+	landFlag = true;
 }
 
 void CJiki::Fric(double& v, double flic){

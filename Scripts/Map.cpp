@@ -8,7 +8,7 @@ void CMap::Draw(){
 	
 	for(int j = 0; j != W; j++){
 		for (int k = 0; k != H; k++) {
-			if(map[j][k] >= 0)block[0][map[j][k]].Draw(j * 50, k * 50);
+			if(map[j][k] >= 0)block[0][map[j][k]].Draw(j * CHIP_SIZE, k * CHIP_SIZE);
 		}
 	}
 }
