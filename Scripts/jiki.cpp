@@ -1,8 +1,8 @@
 #include "jiki.h"
 #include "Bullet.h"
-#include "Scroll.h"
+#include "Camera.h"
 #include "Physics.h"
-extern Scroll scroll;
+extern Camera camera;
 extern KeyConfig keyconfig;
 extern Physics physics;
 extern CBulletManager GetBulletManager();
@@ -36,7 +36,7 @@ void CJiki::Move() {
 
 
 void CJiki::Draw() {
-	DrawBox(x-scroll.xScroll(x), y, x + SIZE - scroll.xScroll(x) , y + SIZE, RED, true);
+	DrawBox(x-camera.GetX(), y, x + SIZE - camera.GetX() , y + SIZE, RED, true);
 }
 
 //bool CJiki::Hit() {
@@ -58,6 +58,31 @@ int CJiki::GetGunX(){
 
 int CJiki::GetGunY(){
 	return y + 25;
+}
+
+int CJiki::GetVX()
+{
+	return vx;
+}
+
+int CJiki::GetAccel()
+{
+	return ACCEL;
+}
+
+int CJiki::GetAirFric()
+{
+	return AIR_FRIC;
+}
+
+int CJiki::GetLandFric()
+{
+	return LAND_FRIC;
+}
+
+int CJiki::GetScale()
+{
+	return SCALE;
 }
 
 CJiki jiki;

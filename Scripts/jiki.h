@@ -3,7 +3,7 @@
 
 class CJiki {
 private:
-	const double SCALE=4;
+	const double SCALE=2;
 	int x, y;
 	double vy, vx;
 	const int SIZE = 50;
@@ -21,4 +21,6 @@ public:
 	/*bool Hit();*/
 	int GetX(),GetY();
 	int GetGunX(), GetGunY();
+	int GetVX();
+	int GetAccel(),GetAirFric(),GetLandFric(),GetScale();
 };

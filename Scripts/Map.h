@@ -1,15 +1,19 @@
 #pragma once
 #include "Suken.h"
+extern
 
 class CMap {
 private:
-	static const int W = 16;
 	static const int H = 12;
 	static const int CHIP_SIZE = 50;
 	static const int CHIP_GROUP_NUM = 1;
-	int map[W][H];
+	std::vector< std::vector<int> > buf;
 	GraphVec block[1];
+	
+	MCE mce;
 public:
+	int WIDTH;
+	int HIGHT;
 	CMap();
 	void Draw();
 	void Set();

@@ -21,7 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Physics.h" />
-    <ClInclude Include="Scroll.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="CSGame.h" />
     <ClInclude Include="CSTitle.h" />
     <ClInclude Include="jiki.h" />
@@ -54,7 +54,7 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">C:\DxLib_VC\dxlib</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="Physics.cpp" />
-    <ClCompile Include="Scroll.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CSGame.cpp" />
     <ClCompile Include="CSTitle.cpp" />
     <ClCompile Include="jiki.cpp" />
