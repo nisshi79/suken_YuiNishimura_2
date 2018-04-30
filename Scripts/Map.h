@@ -12,6 +12,10 @@ private:
 	
 	MCE mce;
 public:
+	std::vector< std::vector<Rect> > rect;
+	std::vector< std::vector<RectFlag> > enable;
+	std::vector< std::vector<RectFlag> > buF;
+
 	int WIDTH;
 	int HIGHT;
 	CMap();

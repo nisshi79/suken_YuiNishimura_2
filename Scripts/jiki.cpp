@@ -11,6 +11,11 @@ CJiki::CJiki() {
 	x = 100;
 	y = 300;
 	landFlag = true;
+	rect.left = 0;
+	rect.right = 50;
+	rect.top = 0;
+	rect.bottom = 50;
+	place = {x, y};
 }
 
 void CJiki::Move() {
@@ -39,10 +44,13 @@ void CJiki::Draw() {
 	DrawBox(x-camera.GetX(), y, x + SIZE - camera.GetX() , y + SIZE, RED, true);
 }
 
-//bool CJiki::Hit() {
-//	rect()
-//	HitMRectRect();
-//}
+bool CJiki::Hit() {
+	for (int i = 0; i != 16; ++i) {
+		for (int k = 0; k != 12; ++k) {
+			
+		}
+	}
+}
 
 int CJiki::GetX() {
 	return this -> x;
