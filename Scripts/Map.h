@@ -9,7 +9,7 @@ private:
 	static const int CHIP_GROUP_NUM = 1;
 	std::vector< std::vector<int> > buf;
 	GraphVec block[1];
-	
+	int kBufP,jBufM,jBufP,kBufM;
 	MCE mce;
 public:
 	std::vector< std::vector<Rect> > rect;
@@ -20,5 +20,6 @@ public:
 	int HIGHT;
 	CMap();
 	void Draw();
+	void HitJiki();
 	void Set();
 };

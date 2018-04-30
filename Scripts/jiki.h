@@ -11,9 +11,10 @@ private:
 	const double ACCEL=20*SCALE;
 	const double AIR_FRIC=0.3*SCALE;
 	const double LAND_FRIC = 0.5*SCALE;
-	bool landFlag;
+	
 	
 public:
+	bool landFlag;
 	int x, y;
 	int vy, vx;
 	Rect rect;
@@ -21,7 +22,6 @@ public:
 	CJiki();
 	void Move();
 	void Draw();
-	bool Hit();
 	/*bool Hit();*/
 	int GetX(),GetY();
 	int GetGunX(), GetGunY();

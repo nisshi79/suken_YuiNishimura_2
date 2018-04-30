@@ -9,8 +9,9 @@ extern CBulletManager GetBulletManager();
 
 CJiki::CJiki() {
 	x = 100;
-	y = 300;
-	landFlag = true;
+	y=200;
+	landFlag = false;
+	
 	rect.left = 0;
 	rect.right = 50;
 	rect.top = 0;
@@ -25,16 +26,13 @@ void CJiki::Move() {
 	if(landFlag)physics.Fric(vx, LAND_FRIC);
 	if(!landFlag)physics.Fric(vx, AIR_FRIC);
 	
+	if (!landFlag)physics.Accel(vy, DOWN, G, VELOCITY_LIMIT);
+
 	x += vx;
 
 	
-	if(y==300+SIZE)landFlag = true;
 	
-	//temp
-	if (y + vy + 50 > 600) {
-		y = 600;
-		vy = 0;
-	}
+	
 	y += vy;
 }
 
@@ -44,13 +42,13 @@ void CJiki::Draw() {
 	DrawBox(x-camera.GetX(), y, x + SIZE - camera.GetX() , y + SIZE, RED, true);
 }
 
-bool CJiki::Hit() {
-	for (int i = 0; i != 16; ++i) {
-		for (int k = 0; k != 12; ++k) {
-			
-		}
-	}
-}
+//bool CJiki::Hit() {
+//	for (int i = 0; i != 16; ++i) {
+//		for (int k = 0; k != 12; ++k) {
+//			
+//		}
+//	}
+//}
 
 int CJiki::GetX() {
 	return this -> x;

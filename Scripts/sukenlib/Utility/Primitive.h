@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 
 #include "../Manager.h"
 
 namespace suken {
 
 	/**
-	*	@brief “ñŸŒ³ƒxƒNƒgƒ‹\‘¢‘Ì‚ÌÅIŒ`‘Ô
+	*	@brief äºŒæ¬¡å…ƒãƒ™ã‚¯ãƒˆãƒ«æ§‹é€ ä½“ã®æœ€çµ‚å½¢æ…‹
 	*/
 	template<typename T = float>
 	struct Twin {
@@ -244,6 +244,12 @@ namespace suken {
 			bottom += vec.y;
 			return *this;
 		}
+		void Set(int left, int right, int top, int bottom) {
+			this->left = left;
+			this->right = right;
+			this->top = top;
+			this->bottom = bottom;
+		}
 	};
 
 	struct RectF {
@@ -296,12 +302,12 @@ namespace suken {
 	void HitMRectRectF(float& x, float& y, float& vx, float& vy, const RectF& r1, const RectF& r2, const RectFlag& enable = RectFlag(true), RectFlag& flag = RectFlag());
 
 	/**
-	*	@brief	’·•ûŒ`•`‰æ
+	*	@brief	é•·æ–¹å½¢æç”»
 	*/
 	void DrawBox(Vector2D upperLeft, Vector2D lowerRight, unsigned int color, bool fillFlag);
 
 	/**
-	*	@brief	lŠpŒ`•`‰æ
+	*	@brief	å››è§’å½¢æç”»
 	*/
 	void DrawQuadrangle(Vector2D upperLeft, Vector2D upperRight, Vector2D lowerRight, Vector2D lowerLeft, unsigned int color, bool fillFlag);
 }

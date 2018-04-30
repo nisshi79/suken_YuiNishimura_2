@@ -14,13 +14,13 @@ void CSGame::Loop() {
 	bullet.Appear(jiki.GetGunX(),jiki.GetGunY());
 	bullet.Move();
 	jiki.Move();
+	map.HitJiki();
 }
 
 void CSGame::Draw() {
 	map.Draw();
 	bullet.Draw();
 	jiki.Draw();
-	
 }
 
 void CSGame::End() {

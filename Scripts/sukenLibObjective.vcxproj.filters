@@ -29,10 +29,10 @@
     <Filter Include="シーン ファイル">
       <UniqueIdentifier>{468a6a31-9e15-4c0a-83df-b8d89b02b207}</UniqueIdentifier>
     </Filter>
-    <Filter Include="メイン ファイル\Util">
+    <Filter Include="メイン ファイル\Utils">
       <UniqueIdentifier>{8dc7da2b-f067-4d12-bd1d-52dc972f1d57}</UniqueIdentifier>
     </Filter>
-    <Filter Include="メイン ファイル\Obj">
+    <Filter Include="メイン ファイル\Objs">
       <UniqueIdentifier>{a85cb0eb-985c-48f5-b203-76b497c3689b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -98,22 +98,22 @@
       <Filter>シーン ファイル</Filter>
     </ClInclude>
     <ClInclude Include="KeyConfig.h">
-      <Filter>メイン ファイル\Util</Filter>
+      <Filter>メイン ファイル\Utils</Filter>
     </ClInclude>
     <ClInclude Include="jiki.h">
-      <Filter>メイン ファイル\Obj</Filter>
+      <Filter>メイン ファイル\Objs</Filter>
     </ClInclude>
     <ClInclude Include="Bullet.h">
-      <Filter>メイン ファイル\Obj</Filter>
+      <Filter>メイン ファイル\Objs</Filter>
     </ClInclude>
     <ClInclude Include="Physics.h">
-      <Filter>メイン ファイル\Util</Filter>
+      <Filter>メイン ファイル\Utils</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
-      <Filter>メイン ファイル\Obj</Filter>
+      <Filter>メイン ファイル\Objs</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>メイン ファイル\Util</Filter>
+      <Filter>メイン ファイル\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -169,22 +169,22 @@
       <Filter>シーン ファイル</Filter>
     </ClCompile>
     <ClCompile Include="KeyConfig.cpp">
-      <Filter>メイン ファイル\Util</Filter>
+      <Filter>メイン ファイル\Utils</Filter>
     </ClCompile>
     <ClCompile Include="Bullet.cpp">
-      <Filter>メイン ファイル\Obj</Filter>
+      <Filter>メイン ファイル\Objs</Filter>
     </ClCompile>
     <ClCompile Include="jiki.cpp">
-      <Filter>メイン ファイル\Obj</Filter>
+      <Filter>メイン ファイル\Objs</Filter>
     </ClCompile>
     <ClCompile Include="Physics.cpp">
-      <Filter>メイン ファイル\Util</Filter>
+      <Filter>メイン ファイル\Utils</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
-      <Filter>メイン ファイル\Obj</Filter>
+      <Filter>メイン ファイル\Objs</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>メイン ファイル\Util</Filter>
+      <Filter>メイン ファイル\Utils</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
