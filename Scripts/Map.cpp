@@ -20,8 +20,6 @@ void CMap::Set(){
 	rect.resize(WIDTH);
 	for (int i = 0; i< WIDTH; i++)rect[i].resize(HIGHT);
 
-	buF.resize(WIDTH);
-	for (int i = 0; i< WIDTH; i++)buF[i].resize(HIGHT);
 	
 	enable.resize(WIDTH);
 	for (int i = 0; i< WIDTH; i++)enable[i].resize(HIGHT);
@@ -30,8 +28,7 @@ void CMap::Set(){
 	for (int j = 0; j != WIDTH; j++) {
 		for (int k = 0; k != HIGHT; k++) {
 			buf[j][k] = mce.Get(mce.layer.A, j, k);
-			buF[j][k] = false;
-			enable[j][k] = true;
+			buF = false;
 		}
 	}
 	
@@ -75,8 +72,6 @@ void CMap::Set(){
 			}
 		}
 	}
-
-
 }
 void CMap::Draw(){
 	for(int j = 0; j != WIDTH; j++){
@@ -86,11 +81,15 @@ void CMap::Draw(){
 	}
 }
 void CMap::HitJiki(){
+	buF = false;
 	for (int j = 0; j != WIDTH; j++) {
 		for (int k = 0; k != HIGHT; k++) {
-			HitMRectRect(jiki.x, jiki.y, jiki.vx, jiki.vy, jiki.rect, rect[j][k], enable[j][k], buF[j][k]);
-			jiki.landFlag = buF[j][k].bottom;
+			
+			HitMRectRect(jiki.x, jiki.y, jiki.vx, jiki.vy, jiki.rect, rect[j][k], enable[j][k], buF);
+			
 		}
 	}
+	jiki.landFlag = buF.bottom;
+
 }
 CMap map;

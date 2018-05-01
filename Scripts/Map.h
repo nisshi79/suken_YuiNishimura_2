@@ -10,10 +10,11 @@ private:
 	std::vector< std::vector<int> > buf;
 	GraphVec block[1];
 	MCE mce;
+	RectFlag buF;
+
 public:
 	std::vector< std::vector<Rect> > rect;
 	std::vector< std::vector<RectFlag> > enable;
-	std::vector< std::vector<RectFlag> > buF;
 
 	int WIDTH;
 	int HIGHT;

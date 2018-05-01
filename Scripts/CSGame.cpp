@@ -21,6 +21,7 @@ void CSGame::Draw() {
 	map.Draw();
 	bullet.Draw();
 	jiki.Draw();
+
 }
 
 void CSGame::End() {
